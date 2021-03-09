@@ -1,18 +1,26 @@
 # Playalong
 ## DAT109 Project
-### Overview
+
+#### Overview
 Our group has opted to tackle Task 2 as our project.
 
+#### Meeting references:
+[]()
 
-### GIT Team Etiquette:
-Since we are 11 people in this project, some precautions have to be taken as not to step on eachothers toes, thus sticking to common etiquette is a good practice.
-https://dev.to/milu_franz/git-explained-proper-team-etiquette-1od
+#### Useful info:
+
+
+#### GIT Team Etiquette:
+
+[git-etiquette](https://dev.to/milu_franz/git-explained-proper-team-etiquette-1od)
+
+Since we are 11 people working on this project, some precautions have to be taken as not to step on eachothers toes, thus sticking to common etiquette is a good practice.
 
 ###### Summary
 * The main and test repositories represents **finished** code
 * **Do not push/publish to main/test, even though these are locked**
 
-### Collaborators:
+#### Collaborators:
 * Aahed Diyab
     * 588408
 * Abu Tallaha Hussain
