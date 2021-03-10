@@ -23,14 +23,18 @@ Our group has opted to tackle Task 2 as our project.
     * Download repository
 * Create JetBrains student license:
     * [Educational License](https://www.jetbrains.com/community/education/#students) (use school email)
-    * Confirm email (...?)
+    * Confirm email
+    * Log in (https://account.jetbrains.com/login), and download as shown in the picture:
+    * ![img.png](img.png)
+    * Install the environment and lunch it.
+    * It will request another log in, use the licensed account.
 * Install TomEE:
     * [TomEE](https://tomee.apache.org)
     * Unzip into: 
         * Mac: [/Library/TomEE](/Library/TomEE)
             * In terminal type `chmod -r 777 /Library/TomEE`
         * Windows: [C:/ProgramFiles/TomEE](C:/ProgramFiles/TomEE)
-            * (...?)
+            * (Nothing in the way so long..)
 * Install IntelliJ IDEA:
     * [IDEA](https://www.jetbrains.com/idea/)
     * Open project (where you downloaded repository, Playalong.iml and pom.xml should be inside opened project)
