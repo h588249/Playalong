@@ -1,6 +1,12 @@
 # Playalong
 ## DAT109 Project
 
+### Lenker
+
+* [Utviklingsplan](Project/Documents/utviklingsplan.md)
+* [Ordliste](#)
+
+
 #### Overview
 Our group has opted to tackle Task 2 as our project.
 
