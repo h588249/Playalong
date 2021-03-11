@@ -76,3 +76,26 @@ Since we are 11 people working on this project, some precautions have to be take
     * 586636
 * Øyvind Espetvedt
     * 584986
+
+#### Roles 
+
+##### Back end 
+* Aahed 
+* Thomas 
+* Sebastian 
+
+##### Front end 
+* Daniel
+* Øyvind 
+* Mathias 
+
+##### Fullstack/potato 
+* Olav 
+
+##### Testing 
+* Tallah 
+* Thorbjørn 
+
+##### Project-leaders 
+* Ivar 
+* Emilie 
