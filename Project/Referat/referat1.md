@@ -1,10 +1,10 @@
-##Referat 1: uke 10 
+## Referat 1: uke 10 
 
 Åpent for å stille spørsmål og få svar på dem. Ting som kan ha vært uklart 
 
 Finne ut hvordan vi tenker vi skal føre timeliste 
 
-#####Fordeling av arbeid 
+##### Fordeling av arbeid 
 styrker og svakheter? Hva kan være fornuftig hver enkelt jobber med? 
 
 Interne team 
@@ -12,7 +12,7 @@ Struktur
 
 Noen som setter opp arkitektur? Det vil i senere tid hjelpe med hva som skal gjøres av arbeid! 
 
-#####Definering av de forskjellige rollene 
+##### Definering av de forskjellige rollene 
 
 *Front end*
 *Back end*
@@ -23,7 +23,7 @@ Folk kan komme med ønsker (hva som ønskes å jobbe med?)
 
 
 
-###Hoved arbeidsoppgaver: 
+### Hoved arbeidsoppgaver: 
 
 ***Prosjektleder:*** overordnet holder track på tidslinjen, hva som må gjøres av arbeidsoppgavene som er igjen. (Slags leder rolle) 
 
@@ -37,7 +37,7 @@ Det å knytte de forskjellige modellene sammen, sørge for at det som blir gjort
 ***Business logikk:*** et eksempel kan være slangespill. Implementere når du treffer en slange så går du ned over og ikke oppover. Implementering av den logikken som skal få prosjektet til å fungere. 
  
 
-####Ved første møte med kunde(fredag. 12 mars): 
+#### Ved første møte med kunde(fredag. 12 mars): 
 Forklare hvordan vi tenker å gjøre det i forhold til arbeidsoppgaven. 
 
 

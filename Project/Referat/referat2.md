@@ -1,4 +1,4 @@
-##Referat 2 (10.mars) 
+## Referat 2 (10.mars) 
 
 Flere har prøvd å laste ned GitHub prosjektet, og det ser ut til å fungere. 
 
