@@ -29,7 +29,4 @@ The vision document shall fulfill its purpose through a description of:
         environment will be IntelliJ. The final product will be a web-app, that will have a log in system, and further more
         options for playing.
 
-* An overview of assumptions and frameworks, which if they change will change something described in this document
-
-      //  Usikker?  Snakker vi om ting som kunne forandres underveis???
 
