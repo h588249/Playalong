@@ -1,4 +1,4 @@
-Referat 2 (10.mars) 
+## Referat 2 (10.mars) 
 
 Flere har prøvd å laste ned GitHub prosjektet, og det ser ut til å fungere. 
 
@@ -7,18 +7,18 @@ Alle fører egne timelister (beskrivelse på GitHub)
 
 Inndele hvem som skal gjøre hva i gruppe arbeidet 
 
-Brukstilfellemodell og supplerende krav: Tallah, Øyvind og Emilie 
-Utviklingsmiljøet: Olav 
-Visjons dokumentet: Ivar og Aahed 
-Risikoliste: Daniel og Sebastian 
-Utviklingsplan/iterasjonsplan: Mathias og Thomas 
+**Brukstilfellemodell og supplerende krav:** Tallah, Øyvind og Emilie 
+**Utviklingsmiljøet:** Olav 
+**Visjons dokumentet:** Ivar og Aahed 
+**Risikoliste:** Daniel og Sebastian 
+**Utviklingsplan/iterasjonsplan:** Mathias og Thomas 
 
 Kostnadsestimat: 10 (timer)* 11 (personer) * (antall uker) = 
 
-Fristen for å gjøre oppgavene er fredag kl 09.00
+**Fristen for å gjøre oppgavene er fredag kl 09.00**
 
 
-MVC:
+**MVC:**
 
 Servlets - View
 
@@ -28,6 +28,6 @@ Flytende logikk, ting som skal hentes fra databasen, eller serve viewet - Contro
 
 
 
-Hvordan ønsker vi å bruke GitHub? 
-Hvordan oppnå best mulig prosjekt flyt? 
+*Hvordan ønsker vi å bruke GitHub?*
+*Hvordan oppnå best mulig prosjekt flyt?*
 
