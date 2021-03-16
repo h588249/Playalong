@@ -1,4 +1,4 @@
-#Iterations
+# Iterations
 
 * Display COMP module
 * Import COMP module
@@ -9,7 +9,7 @@
 * Search module (search for desired song)
 * Most played songs module
 
-##Iteration 1
+## Iteration 1
 
 * Log in module
     * index.jsp for receiving data
@@ -17,7 +17,7 @@
 * Log out module
     * logout.java
 
-##Iteration 2
+## Iteration 2
 
 * Create user
     * user.java
@@ -27,7 +27,7 @@
     * admin.jsp
     * admin.java (database)
 
-##Iteration 3
+## Iteration 3
 
 * Display COMP
     * display.jsp
@@ -36,7 +36,7 @@
 * Import COMP
     * import.java (database)
 
-##Iteration 4
+## Iteration 4
 
 * Search
     * search.java using songs.java to show songs matching search
