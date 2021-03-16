@@ -18,4 +18,6 @@ public class LoginServlet extends HttpServlet
         PrintWriter out = response.getWriter();
         out.println("Test");
     }
+
+    // TODO: doPost?
 }
