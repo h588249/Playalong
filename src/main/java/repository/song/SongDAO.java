@@ -1,5 +1,12 @@
 package repository.song;
 
-public class SongDAO
+import model.song.Song;
+import repository.AbstractDAO;
+
+public class SongDAO extends AbstractDAO<Song>
 {
+    public SongDAO()
+    {
+        super(Song.class);
+    }
 }

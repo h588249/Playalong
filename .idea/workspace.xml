@@ -10,28 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e218f4c9-bab8-4543-8db1-ba0652829a44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/admin/AdminPageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/createuser/CreateUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/displaycomp/DisplayCOMPServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/importcomp/ImportServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/login/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/search/MostPlayedSongsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/search/SearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/song/Instrument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/song/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/UserSongHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/DatabaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/createuser/CreateUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/login/LoginDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/song/SongDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/createuser/createuser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/LCO/usercase.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project/LCO/usercase.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dat109/group12/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Playalong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Playalong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/UserSongHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/UserSongHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/DatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/DatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/createuser/CreateUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/createuser/CreateUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/login/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/login/LoginDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/song/SongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/song/SongDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +63,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/controller" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
   </component>
@@ -89,6 +79,9 @@
       <recent name="controller.displaycomp" />
       <recent name="model.createuser" />
       <recent name="controller.createuser" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615547475101</updated>
       <workItem from="1615547478368" duration="1341000" />
-      <workItem from="1615882717101" duration="5767000" />
+      <workItem from="1615882717101" duration="7589000" />
     </task>
     <servers />
   </component>
@@ -198,6 +191,10 @@
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="301" y="246" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615547652985" />
+    <state x="-961" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1615892477518">
+      <screen x="-2560" y="-217" width="2560" height="1359" />
+    </state>
+    <state x="-961" y="176" key="#com.intellij.ide.util.MemberChooser/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615892477518" />
     <state x="-1173" y="384" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615886585241">
       <screen x="-2560" y="-217" width="2560" height="1359" />
     </state>
@@ -258,10 +255,10 @@
       <screen x="-2560" y="-217" width="2560" height="1359" />
     </state>
     <state x="-1154" y="102" key="NewModule_or_Project.wizard/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615883535690" />
-    <state x="-1313" y="-23" key="SettingsEditor" timestamp="1615883548326">
+    <state x="-1313" y="-23" key="SettingsEditor" timestamp="1615892582665">
       <screen x="-2560" y="-217" width="2560" height="1359" />
     </state>
-    <state x="-1313" y="-23" key="SettingsEditor/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615883548326" />
+    <state x="-1313" y="-23" key="SettingsEditor/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615892582665" />
     <state x="346" y="223" key="SettingsEditor/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615547533555" />
     <state x="-916" y="251" key="chooseDestDirectoryDialog" timestamp="1615891069861">
       <screen x="-2560" y="-217" width="2560" height="1359" />
