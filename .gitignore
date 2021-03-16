@@ -27,5 +27,4 @@ target/
 .classpath
 .project
 *.prefs
-*.idea
 *.settings
