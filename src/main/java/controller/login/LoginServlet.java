@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         session = request.getSession(true);
-        session.setMaxInactiveInterval(5);
+        session.setMaxInactiveInterval(10);
 
         //Checks if there is something wrong with the inputs
         if (username == null || password == null)

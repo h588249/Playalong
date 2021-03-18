@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e218f4c9-bab8-4543-8db1-ba0652829a44" name="Default Changelist" comment="Removed lib-folder and added the jars as dependencies in pom.xml, also removed project-folder as it seemed unnecessary">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_taglibs_taglibs_standard_impl_1_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Playalong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Playalong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/login/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/login/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/demo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -311,7 +307,7 @@
       <workItem from="1616102218554" duration="82000" />
       <workItem from="1616102330697" duration="255000" />
       <workItem from="1616102757787" duration="1000" />
-      <workItem from="1616102765284" duration="819000" />
+      <workItem from="1616102765284" duration="1361000" />
     </task>
     <servers />
   </component>
