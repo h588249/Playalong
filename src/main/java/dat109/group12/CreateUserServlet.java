@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "CreateUserServlet", value = "/CreateUserServlet")
+@WebServlet(name = "CreateUserServlet", value = "/register")
 public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,6 +20,12 @@ public class CreateUserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String passord = request.getParameter("passord");
 
-        Database.insert_user(User.construct(email, passord, fornavn, etternavn));
+        User u = User.construct(email, passord, fornavn, etternavn);
+
+        //Database.insert_user(u);
+
+        request.getSession().setAttribute("user", u);
+
+        response.sendRedirect("login.jsp");
     }
 }
