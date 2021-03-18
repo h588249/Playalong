@@ -9,18 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e218f4c9-bab8-4543-8db1-ba0652829a44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/Pair.java" afterDir="false" />
+    <list default="true" id="e218f4c9-bab8-4543-8db1-ba0652829a44" name="Default Changelist" comment="Removed lib-folder and added the jars as dependencies in pom.xml, also removed project-folder as it seemed unnecessary">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_taglibs_taglibs_standard_impl_1_2_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Playalong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Playalong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/UserSongHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/UserSongHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/DatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/DatabaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/createuser/CreateUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/createuser/CreateUserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/login/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/login/LoginDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/song/SongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/song/SongDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/login/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -45,13 +46,6 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1pedQPWrr7acIkKjdsCDxYmZVUL" />
   <component name="ProjectLevelVcsManager">
@@ -67,24 +61,38 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/controller" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/util" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Programming\Programmerings Prosjekt\Playalong\src\main\java\util" />
+      <recent name="G:\Programming\Programmerings Prosjekt\Playalong" />
+      <recent name="G:\Programming\Programmerings Prosjekt\Playalong\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Programming\Programmerings Prosjekt\Playalong" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="controller.createuser" />
       <recent name="controller.admin" />
       <recent name="controller.importcomp" />
       <recent name="controller.displaycomp" />
       <recent name="model.createuser" />
-      <recent name="controller.createuser" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="TomeeConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="TomEE Server.TomEE plus 8.0.4">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -96,18 +104,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TomEE 9.0.39" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 9.0.39" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
+    <configuration name="TomEE 9.0.41" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 9.0.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Playalong:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_Playalong" />
+        <option name="HTTP_PORT" value="8091" />
+        <option name="JNDI_PORT" value="1111" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -147,6 +157,21 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -169,6 +194,99 @@
         </option>
       </method>
     </configuration>
+    <configuration name="TomEE plus 8.0.4" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE plus 8.0.4" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Playalong:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="3b3b6fa6-2e1c-4b47-84fb-31d02e65b429" />
+        <option name="HTTP_PORT" value="8090" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60367" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Playalong:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TomEE Server.TomEE 9.0.41" />
+      <item itemvalue="TomEE Server.TomEE plus 8.0.4" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -180,93 +298,36 @@
       <updated>1615547475101</updated>
       <workItem from="1615547478368" duration="1341000" />
       <workItem from="1615882717101" duration="7589000" />
+      <workItem from="1616100577994" duration="273000" />
+      <workItem from="1616100889987" duration="274000" />
+      <workItem from="1616101172629" duration="37000" />
+      <workItem from="1616101313247" duration="99000" />
+      <workItem from="1616101416714" duration="1000" />
+      <workItem from="1616101438302" duration="83000" />
+      <workItem from="1616101585942" duration="60000" />
+      <workItem from="1616101694653" duration="313000" />
+      <workItem from="1616102045027" duration="6000" />
+      <workItem from="1616102063399" duration="143000" />
+      <workItem from="1616102218554" duration="82000" />
+      <workItem from="1616102330697" duration="255000" />
+      <workItem from="1616102757787" duration="1000" />
+      <workItem from="1616102765284" duration="819000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="301" y="246" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615547652985">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="301" y="246" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615547652985" />
-    <state x="-961" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1615892477518">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-961" y="176" key="#com.intellij.ide.util.MemberChooser/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615892477518" />
-    <state x="-1173" y="384" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615886585241">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-1173" y="384" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615886585241" />
-    <state x="-989" y="338" width="542" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1615891069914">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-989" y="338" width="542" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615891069914" />
-    <state width="1032" height="250" key="GridCell.Tab.0.bottom" timestamp="1615551161577">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.0.bottom/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161577" />
-    <state width="1032" height="250" key="GridCell.Tab.0.center" timestamp="1615551161576">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.0.center/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161576" />
-    <state width="1032" height="250" key="GridCell.Tab.0.left" timestamp="1615551161575">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.0.left/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161575" />
-    <state width="1032" height="250" key="GridCell.Tab.0.right" timestamp="1615551161576">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.0.right/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161576" />
-    <state width="1032" height="250" key="GridCell.Tab.1.bottom" timestamp="1615551161579">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.1.bottom/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161579" />
-    <state width="1032" height="250" key="GridCell.Tab.1.center" timestamp="1615551161578">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.1.center/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161578" />
-    <state width="1032" height="250" key="GridCell.Tab.1.left" timestamp="1615551161578">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.1.left/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161578" />
-    <state width="1032" height="250" key="GridCell.Tab.1.right" timestamp="1615551161578">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.1.right/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161578" />
-    <state width="1032" height="250" key="GridCell.Tab.2.bottom" timestamp="1615551161581">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.2.bottom/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161581" />
-    <state width="1032" height="250" key="GridCell.Tab.2.center" timestamp="1615551161580">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.2.center/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161580" />
-    <state width="1032" height="250" key="GridCell.Tab.2.left" timestamp="1615551161579">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.2.left/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161579" />
-    <state width="1032" height="250" key="GridCell.Tab.2.right" timestamp="1615551161580">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="1032" height="250" key="GridCell.Tab.2.right/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615551161580" />
-    <state x="-1154" y="102" key="NewModule_or_Project.wizard" timestamp="1615883535690">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-1154" y="102" key="NewModule_or_Project.wizard/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615883535690" />
-    <state x="-1313" y="-23" key="SettingsEditor" timestamp="1615892582665">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-1313" y="-23" key="SettingsEditor/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615892582665" />
-    <state x="346" y="223" key="SettingsEditor/-2560.-217.2560.1359/0.23.1920.1177@0.23.1920.1177" timestamp="1615547533555" />
-    <state x="-916" y="251" key="chooseDestDirectoryDialog" timestamp="1615891069861">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-916" y="251" key="chooseDestDirectoryDialog/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615891069861" />
-    <state x="-1377" y="48" key="new project wizard" timestamp="1615883511849">
-      <screen x="-2560" y="-217" width="2560" height="1359" />
-    </state>
-    <state x="-1377" y="48" key="new project wizard/-2560.-217.2560.1359/0.23.1920.1177@-2560.-217.2560.1359" timestamp="1615883511849" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
