@@ -4,14 +4,20 @@ It has been decided to split the user cases into modules, this will allow us to 
 The class diagram and domain model will be included in the second iteration. This decision was made because we wish to have a meeting with the customer first so that we have a understanding of what the customer expects. It will also help us create a more accurate domain model and class diagram once the overall architecture is ready.
 
  #### Overall module
- * Display COMP module (html) 
- * Import COMP module (download) 
- * Log in module 
- * Log out module
- * Create user module 
- * Admin page module 
- * Search module (search for desired song) 
- * Most played songs module 
+ * User
+    * Display COMP module (html) 
+    * Log in module 
+    * Log out module
+    * Create user module 
+    * Search module (search for desired song) 
+    * Most played songs module 
+ * Admin
+    * Admin page module 
+ * Moderator
+    * Import COMP module (download)
+
+
+ ##### Hamburger Menu module
 
  ##### Display COMP module 
  A request to controller to fetch the data. 

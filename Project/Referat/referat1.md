@@ -40,8 +40,6 @@ Det å knytte de forskjellige modellene sammen, sørge for at det som blir gjort
 #### Ved første møte med kunde(fredag. 12 mars): 
 Forklare hvordan vi tenker å gjøre det i forhold til arbeidsoppgaven. 
 
-
-Fordeling av oppgaver hver enkelt person har 
 Hva skal vi ta opp på kunde møte på fredag? 
 En overordnede plan 
 
@@ -49,10 +47,7 @@ Oppdeling i forskjellige moduler ?
 
 
 
-
-
-
-##Styremøte 1 (etter hoved møte) 
+## Styremøte 1 (etter hoved møte) 
 
 Hvordan skal vi sette opp Git Hub 
 Planlegging av innleveringer 
