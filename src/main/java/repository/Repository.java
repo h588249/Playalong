@@ -12,6 +12,7 @@ public interface Repository<T>
     T get(String query);
     T get(String query, Pair<String, Object> pair);
     T get(String query, List<Pair<String, Object>> pairs);
+    T getById(Object id);
     List<T> getList(String query);
     List<T> getList(String query, Pair<String, Object> pair);
     List<T> getList(String query, List<Pair<String, Object>> pairs);
