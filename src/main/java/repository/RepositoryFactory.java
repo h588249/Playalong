@@ -1,6 +1,5 @@
 package repository;
 
-import repository.mock.MockRepository;
 import utility.Configuration;
 
 public class RepositoryFactory<T>
@@ -10,8 +9,6 @@ public class RepositoryFactory<T>
     {
         switch (Configuration.getRepositoryConfig())
         {
-            case "mock" :
-                return new MockRepository<>(type);
             case "database" :
                 return new DatabaseRepository<>(type);
         }

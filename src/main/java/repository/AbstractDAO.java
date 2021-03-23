@@ -2,7 +2,7 @@ package repository;
 
 public class AbstractDAO<T>
 {
-    private DatabaseRepository<T> repository;
+    protected DatabaseRepository<T> repository;
 
     public AbstractDAO(Class<T> type)
     {

@@ -2,6 +2,7 @@ package repository;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 public class DatabaseRepository<T> implements Repository<T>

@@ -9,7 +9,6 @@
 
     <context-param>
         <param-name>repository</param-name>
-        <param-value>mock</param-value>
-        <!--<param-value>database</param-value>-->
+        <param-value>database</param-value>
     </context-param>
 </web-app>
