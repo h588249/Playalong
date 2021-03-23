@@ -40,7 +40,7 @@ Nå har vi startet i Build face, prøve å følge planene vi har laget så godt 
 
 overordnet ferdig med iterasjon 1 :) godt jobbet 
 
-:) 
+:))
 
 
 
