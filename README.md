@@ -1,13 +1,52 @@
 # Playalong
 ## DAT109 Project
 
+### Lenker
+
+* [Utviklingsplan](Project/Documents/utviklingsplan.md)
+* [Ordliste](#)
+
+
 #### Overview
 Our group has opted to tackle Task 2 as our project.
 
 #### Meeting references:
-[]()
+[Referat 9. Mars](/Project/Referat/Referat_1_(9._mars).pdf)
 
 #### Useful info:
+* Logging time:
+    * Create name.csv under [Project/Workhours]()
+    * open with vscode/notepad++/whatever
+    * Create header
+        * `Date;Hours;Description`
+    * Log time:
+        * `21/3/9;2;Project meeting`
+
+### Project Setup:
+* Install GitHub Desktop:
+    * [Github Desktop](https://desktop.github.com)
+    * Login with School user (or private if so prefered)
+    * Download repository
+* Create JetBrains student license:
+    * [Educational License](https://www.jetbrains.com/community/education/#students) (use school email)
+    * Confirm email
+    * Log in (https://account.jetbrains.com/login), and download as shown in the picture:
+    * ![img.png](img.png)
+    * Install the environment and lunch it.
+    * It will request another log in, use the licensed account.
+* Install TomEE:
+    * [TomEE](https://tomee.apache.org)
+    * Unzip into: 
+        * Mac: [/Library/TomEE](/Library/TomEE)
+            * In terminal type `chmod -r 777 /Library/TomEE`
+        * Windows: [C:/ProgramFiles/TomEE](C:/ProgramFiles/TomEE)
+            * (Nothing in the way so long..)
+* Install IntelliJ IDEA:
+    * [IDEA](https://www.jetbrains.com/idea/)
+    * Open project (where you downloaded repository, Playalong.iml and pom.xml should be inside opened project)
+* Setup TomEE in IntelliJ:
+    * (Preferences/Settings) -> Build, Execution, Deployment -> Application Servers ->
+    * (+) -> TomEE Server, Set TomEE Home to installation path
 
 
 #### GIT Team Etiquette:
