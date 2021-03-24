@@ -26,9 +26,8 @@
 - Phonenumber must be 8 numerical digits.
   
 ###Password
-- Password must be between 8-20 characters; it must contain at least one capital letter, and atleast 1 numerical digit and one special character.
-  and may only contain the following special characters
-  (!@#$%^&*._-).
+- Password must be between 8-20 characters; it must contain at least one capital letter, and atleast 1 numerical digit and atleast one special character.
+  Only the following special characters are allowed (!@#$%^&*._-).
 
 ###Repeated password
 - Repeated password must be the same as the password.
