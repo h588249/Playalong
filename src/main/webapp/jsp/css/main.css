@@ -9,3 +9,11 @@ body {
     padding: 3px;
     margin: 5px;
 }
+
+.containerButton{
+    padding-top: 10px;
+}
+
+.message{
+    visibility: hidden;
+}

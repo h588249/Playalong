@@ -40,7 +40,9 @@
             <label for="passwordRep">Password repeated:</label></br>
             <input type="password" name="passwordRep" id="passwordRep" class="input"/>
             </br>
-            <button type="submit">Create user</button>
+            <div class="containerButton">
+                <button type="submit">Create user</button>
+            </div>
         </fieldset>
     </form>
 </div>

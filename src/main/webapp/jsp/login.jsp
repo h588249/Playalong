@@ -13,17 +13,18 @@
     <form method="post" action="login">
         <div class="mainContainer">
             <h2 class="title">Login</h2>
-            <a class="link" href="createUser.jsp">Register new participation</a>
-            </br>
+
             <label class="container">
                 <span>Email:</span>
+                </br>
                 <input type="text" name="email" id="email" class="input"/>
             </label>
             </br>
             <span class="message"><c:out value='${requestScope["from"]}'/></span> <!-- Can be used for displaying error messages-->
 
-            <label class="container"></br>
+            <label class="container">
                 <span>Password:</span>
+                </br>
                 <input type="password" name="password" id="password" class="input" value/>
             </label>
 
@@ -34,6 +35,7 @@
 
             <div class="containerButton">
                 <button type="submit" class="submitButton">Login</button>
+                <a href="createUser.jsp"><button type="button">Register</button></a>
             </div>
         </div>
     </form>
