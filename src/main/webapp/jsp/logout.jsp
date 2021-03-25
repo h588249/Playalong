@@ -9,9 +9,11 @@
 <html>
 <head>
     <title>Logged out</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <h1>Bye</h1>
     <h2>You are now logged out</h2>
+    <a href="login.jsp"><button>Log in</button></a>
 </body>
 </html>

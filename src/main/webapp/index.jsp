@@ -12,5 +12,7 @@
 </head>
 <body>
     Test 2
+    <a href="jsp/login.jsp">Log in</a>
+    <a href="jsp/logout.jsp">Log out</a>
 </body>
 </html>

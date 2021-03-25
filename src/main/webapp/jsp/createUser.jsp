@@ -9,24 +9,12 @@
 <html>
 <head>
     <title>Sign up</title>
-    <style>
-        body {
-            width: 60%;
-            margin: 5px auto;
-            padding: 10px;
-        }
-
-        .input{
-            padding: 3px;
-            margin: 5px;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <h2>Sign up</h2>
 <div id="container">
-    <form method="post" action="signUp" class="form">
+    <form method="post" action="register" class="form">
         <fieldset>
             <label for="firstname">Firstname:</label></br>
             <input type="text" name="firstname" class="input" id="firstname"/>
