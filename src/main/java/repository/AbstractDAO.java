@@ -1,11 +1,9 @@
 package repository;
 
-public class AbstractDAO<T>
-{
-    protected DatabaseRepository<T> repository;
+public abstract class AbstractDAO<T> {
+    protected Repository<T> repository;
 
-    public AbstractDAO(Class<T> type)
-    {
-        repository = new DatabaseRepository<>(type);
+    public AbstractDAO(Class<T> type, Repository<T> repository) {
+        this.repository = repository;
     }
 }

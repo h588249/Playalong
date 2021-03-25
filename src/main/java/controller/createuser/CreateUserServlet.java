@@ -2,8 +2,11 @@ package controller.createuser;
 
 
 import model.user.User;
+import repository.DatabaseRepository;
+import repository.Repository;
 import repository.createuser.CreateUserDAO;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,14 +15,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "CreateUserServlet", value = "/register")
-public class CreateUserServlet extends HttpServlet
-{
+public class CreateUserServlet extends HttpServlet {
+    @EJB
+    private Repository<User> repository;
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("HERE?");
 
-        request.getRequestDispatcher("createuser/createuser.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/createuser/createuser.jsp").forward(request, response);
 
     }
 
@@ -34,7 +38,7 @@ public class CreateUserServlet extends HttpServlet
 
         System.out.println(username + ", " + displayname + ", " + email + ", " + password);
 
-        User u = new CreateUserDAO().construct(username, email, displayname, password);
+        User u = new CreateUserDAO(repository).construct(username, email, displayname, password);
 
         request.getSession().setAttribute("user", u);
 

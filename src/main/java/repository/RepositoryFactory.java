@@ -10,7 +10,7 @@ public class RepositoryFactory<T>
         switch (Configuration.getRepositoryConfig())
         {
             case "database" :
-                return new DatabaseRepository<>(type);
+                return new DatabaseRepository<>();
         }
 
         throw new UnsupportedOperationException("No such repository type: [" +

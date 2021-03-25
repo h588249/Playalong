@@ -2,14 +2,15 @@ package model.user;
 
 import javax.persistence.*;
 
-@Entity
-@Table(schema = "dat109_project")
+@Entity(name = "user")
+@Table(schema = "dat109_project", name = "user")
 public class User
 {
     @Id
     private String username;
 
     @ManyToOne
+    @JoinColumn(name = "role")
     private Role role;
 
     private String email;
