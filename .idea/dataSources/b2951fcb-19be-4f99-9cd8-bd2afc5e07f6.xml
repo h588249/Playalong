@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="Playalong">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.20">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.19">
     <root id="1">
-      <ServerVersion>13.0</ServerVersion>
-      <DateStyle>dmy</DateStyle>
+      <ServerVersion>12.1</ServerVersion>
+      <DateStyle>mdy</DateStyle>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -133,7 +133,7 @@ false America/Creston
 false America/Cuiaba
 false America/Curacao
 false America/Danmarkshavn
-false America/Dawson
+true America/Dawson
 false America/Dawson_Creek
 true America/Denver
 true America/Detroit
@@ -206,7 +206,6 @@ false America/Noronha
 true America/North_Dakota/Beulah
 true America/North_Dakota/Center
 true America/North_Dakota/New_Salem
-false America/Nuuk
 true America/Ojinaga
 false America/Panama
 true America/Pangnirtung
@@ -248,7 +247,7 @@ true America/Toronto
 false America/Tortola
 true America/Vancouver
 false America/Virgin
-false America/Whitehorse
+true America/Whitehorse
 true America/Winnipeg
 true America/Yakutat
 true America/Yellowknife
@@ -267,7 +266,7 @@ false Antarctica/Vostok
 false Arctic/Longyearbyen
 false Asia/Aden
 false Asia/Almaty
-false Asia/Amman
+true Asia/Amman
 false Asia/Anadyr
 false Asia/Aqtau
 false Asia/Aqtobe
@@ -289,15 +288,15 @@ false Asia/Chongqing
 false Asia/Chungking
 false Asia/Colombo
 false Asia/Dacca
-false Asia/Damascus
+true Asia/Damascus
 false Asia/Dhaka
 false Asia/Dili
 false Asia/Dubai
 false Asia/Dushanbe
 false Asia/Famagusta
-false Asia/Gaza
+true Asia/Gaza
 false Asia/Harbin
-false Asia/Hebron
+true Asia/Hebron
 false Asia/Ho_Chi_Minh
 false Asia/Hong_Kong
 false Asia/Hovd
@@ -305,7 +304,7 @@ false Asia/Irkutsk
 false Asia/Istanbul
 false Asia/Jakarta
 false Asia/Jayapura
-false Asia/Jerusalem
+true Asia/Jerusalem
 false Asia/Kabul
 false Asia/Kamchatka
 false Asia/Karachi
@@ -348,7 +347,7 @@ false Asia/Taipei
 false Asia/Tashkent
 false Asia/Tbilisi
 true Asia/Tehran
-false Asia/Tel_Aviv
+true Asia/Tel_Aviv
 false Asia/Thimbu
 false Asia/Thimphu
 false Asia/Tokyo
@@ -437,7 +436,7 @@ true Canada/Mountain
 true Canada/Newfoundland
 true Canada/Pacific
 false Canada/Saskatchewan
-false Canada/Yukon
+true Canada/Yukon
 true Chile/Continental
 true Chile/EasterIsland
 true Cuba
@@ -599,7 +598,7 @@ false Indian/Mauritius
 false Indian/Mayotte
 false Indian/Reunion
 true Iran
-false Israel
+true Israel
 false JAYT
 false JST
 false Jamaica
@@ -783,62 +782,53 @@ true YEKST
 false YEKT
 false Z
 false Zulu
+true posixrules
 </TimeZones>
-      <StartupTime>1615806146</StartupTime>
+      <StartupTime>1616748550</StartupTime>
     </root>
-    <database id="2" parent="1" name="DiscordBot">
-      <ObjectId>16458</ObjectId>
-      <Owner>postgres</Owner>
+    <database id="2" parent="1" name="chronos">
+      <ObjectId>16385</ObjectId>
+      <Owner>chronos</Owner>
     </database>
-    <database id="3" parent="1" name="Eksamen">
-      <ObjectId>32480</ObjectId>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="4" parent="1" name="Oblig4">
-      <ObjectId>25143</ObjectId>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="5" parent="1" name="Playalong">
-      <ObjectId>32513</ObjectId>
-      <Owner>postgres</Owner>
-      <IntrospectionStateNumber>41276</IntrospectionStateNumber>
-    </database>
-    <database id="6" parent="1" name="VoluntaryExercise2">
-      <ObjectId>18627</ObjectId>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="7" parent="1" name="postgres">
-      <ObjectId>13442</ObjectId>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13688</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>41271</IntrospectionStateNumber>
+      <IntrospectionStateNumber>492</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
-    <role id="8" parent="1" name="pg_execute_server_program">
+    <role id="4" parent="1" name="chronos">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <CreateDb>1</CreateDb>
+      <CreateRole>1</CreateRole>
+      <CanLogin>1</CanLogin>
+    </role>
+    <role id="5" parent="1" name="pg_execute_server_program">
       <ObjectId>4571</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_monitor">
+    <role id="6" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
     </role>
-    <role id="10" parent="1" name="pg_read_all_settings">
+    <role id="7" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_read_all_stats">
+    <role id="8" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_read_server_files">
+    <role id="9" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="13" parent="1" name="pg_signal_backend">
+    <role id="10" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="14" parent="1" name="pg_stat_scan_tables">
+    <role id="11" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_write_server_files">
+    <role id="12" parent="1" name="pg_write_server_files">
       <ObjectId>4570</ObjectId>
     </role>
-    <role id="16" parent="1" name="postgres">
+    <role id="13" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <CreateDb>1</CreateDb>
@@ -847,99 +837,38 @@ false Zulu
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
-    <tablespace id="17" parent="1" name="pg_default">
-      <ObjectId>1663</ObjectId>
+    <schema id="14" parent="3" name="dat109_project">
+      <ObjectId>16386</ObjectId>
+      <StateNumber>489</StateNumber>
       <Owner>postgres</Owner>
-      <StateNumber>1</StateNumber>
-    </tablespace>
-    <tablespace id="18" parent="1" name="pg_global">
-      <ObjectId>1664</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>1</StateNumber>
-    </tablespace>
-    <schema id="19" parent="5" name="dat109_project">
-      <ObjectId>32514</ObjectId>
-      <StateNumber>41273</StateNumber>
-      <Owner>postgres</Owner>
-      <IntrospectionStateNumber>41277</IntrospectionStateNumber>
+      <IntrospectionStateNumber>493</IntrospectionStateNumber>
     </schema>
-    <schema id="20" parent="5" name="information_schema">
-      <ObjectId>13158</ObjectId>
-      <Acl>10=UC/10
-U/10
-</Acl>
-      <StateNumber>293</StateNumber>
+    <schema id="15" parent="3" name="information_schema">
+      <ObjectId>13388</ObjectId>
+      <StateNumber>281</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="21" parent="5" name="pg_catalog">
+    <schema id="16" parent="3" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
-      <Acl>10=UC/10
-U/10
-</Acl>
-      <StateNumber>286</StateNumber>
+      <StateNumber>274</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="22" parent="5" name="public">
+    <schema id="17" parent="3" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <Acl>10=UC/10
-UC/10
-</Acl>
-      <StateNumber>287</StateNumber>
+      <StateNumber>275</StateNumber>
       <Owner>postgres</Owner>
       <Current>1</Current>
     </schema>
-    <extension id="23" parent="5" name="plpgsql">
-      <ObjectId>13428</ObjectId>
-      <Comment>PL/pgSQL procedural language</Comment>
-      <StateNumber>439</StateNumber>
-      <Version>1.0</Version>
-      <SchemaName>pg_catalog</SchemaName>
-      <SchemaId>11</SchemaId>
-    </extension>
-    <language id="24" parent="5" name="c">
-      <ObjectId>13</ObjectId>
-      <Comment>dynamically-loaded C functions</Comment>
-      <StateNumber>1</StateNumber>
-      <ValidatorName>fmgr_c_validator</ValidatorName>
-      <ValidatorSchema>pg_catalog</ValidatorSchema>
-    </language>
-    <language id="25" parent="5" name="internal">
-      <ObjectId>12</ObjectId>
-      <Comment>built-in functions</Comment>
-      <StateNumber>1</StateNumber>
-      <ValidatorName>fmgr_internal_validator</ValidatorName>
-      <ValidatorSchema>pg_catalog</ValidatorSchema>
-    </language>
-    <language id="26" parent="5" name="plpgsql">
-      <ObjectId>13432</ObjectId>
-      <Comment>PL/pgSQL procedural language</Comment>
-      <StateNumber>439</StateNumber>
-      <Trusted>1</Trusted>
-      <HandlerName>plpgsql_call_handler</HandlerName>
-      <HandlerSchema>pg_catalog</HandlerSchema>
-      <InlineHandlerName>plpgsql_inline_handler</InlineHandlerName>
-      <InlineHandlerSchema>pg_catalog</InlineHandlerSchema>
-      <ValidatorName>plpgsql_validator</ValidatorName>
-      <ValidatorSchema>pg_catalog</ValidatorSchema>
-    </language>
-    <language id="27" parent="5" name="sql">
-      <ObjectId>14</ObjectId>
-      <Comment>SQL-language functions</Comment>
-      <StateNumber>1</StateNumber>
-      <Trusted>1</Trusted>
-      <ValidatorName>fmgr_sql_validator</ValidatorName>
-      <ValidatorSchema>pg_catalog</ValidatorSchema>
-    </language>
-    <access-method id="28" parent="5" name="heap">
+    <access-method id="18" parent="3" name="heap">
       <ObjectId>2</ObjectId>
       <Comment>heap table access method</Comment>
       <StateNumber>1</StateNumber>
       <Handler>pg_catalog.heap_tableam_handler</Handler>
       <HandlerId>3</HandlerId>
     </access-method>
-    <access-method id="29" parent="5" name="btree">
+    <access-method id="19" parent="3" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -947,7 +876,7 @@ UC/10
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="30" parent="5" name="hash">
+    <access-method id="20" parent="3" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -955,7 +884,7 @@ UC/10
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="31" parent="5" name="gist">
+    <access-method id="21" parent="3" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -963,7 +892,7 @@ UC/10
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="32" parent="5" name="gin">
+    <access-method id="22" parent="3" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -971,7 +900,7 @@ UC/10
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="33" parent="5" name="spgist">
+    <access-method id="23" parent="3" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -979,7 +908,7 @@ UC/10
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="34" parent="5" name="brin">
+    <access-method id="24" parent="3" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -987,97 +916,101 @@ UC/10
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <table id="35" parent="19" name="role">
-      <ObjectId>32515</ObjectId>
+    <extension id="25" parent="3" name="plpgsql">
+      <ObjectId>13674</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>436</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <language id="26" parent="3" name="c"/>
+    <language id="27" parent="3" name="internal"/>
+    <language id="28" parent="3" name="plpgsql"/>
+    <language id="29" parent="3" name="sql"/>
+    <table id="30" parent="14" name="role">
+      <ObjectId>16387</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
     </table>
-    <table id="36" parent="19" name="user">
-      <ObjectId>32520</ObjectId>
+    <table id="31" parent="14" name="usertable">
+      <ObjectId>16392</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
     </table>
-    <column id="37" parent="35" name="role">
+    <column id="32" parent="30" name="role">
       <Position>1</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>41274</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="38" parent="35" name="role_pkey">
-      <ObjectId>32518</ObjectId>
-      <StateNumber>41274</StateNumber>
+    <index id="33" parent="30" name="role_pkey">
+      <ObjectId>16390</ObjectId>
+      <StateNumber>490</StateNumber>
       <ColNames>role</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
-      <ClassIds>3126</ClassIds>
     </index>
-    <key id="39" parent="35" name="role_pkey">
-      <ObjectId>32519</ObjectId>
-      <StateNumber>41274</StateNumber>
+    <key id="34" parent="30" name="role_pkey">
+      <ObjectId>16391</ObjectId>
+      <StateNumber>490</StateNumber>
       <ColNames>role</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
     </key>
-    <column id="40" parent="36" name="username">
+    <column id="35" parent="31" name="username">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="36" name="role">
+    <column id="36" parent="31" name="role">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="36" name="email">
+    <column id="37" parent="31" name="email">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="36" name="displayname">
+    <column id="38" parent="31" name="displayname">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="36" name="password">
+    <column id="39" parent="31" name="password">
       <Position>5</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>41275</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="45" parent="36" name="user_pkey">
-      <ObjectId>32523</ObjectId>
-      <StateNumber>41275</StateNumber>
+    <index id="40" parent="31" name="usertable_pkey">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>491</StateNumber>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
-      <ClassIds>3126</ClassIds>
     </index>
-    <key id="46" parent="36" name="user_pkey">
-      <ObjectId>32524</ObjectId>
-      <StateNumber>41275</StateNumber>
+    <key id="41" parent="31" name="usertable_pkey">
+      <ObjectId>16396</ObjectId>
+      <StateNumber>491</StateNumber>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>user_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>usertable_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="47" parent="36" name="user_role_fkey">
-      <ObjectId>32525</ObjectId>
-      <StateNumber>41275</StateNumber>
+    <foreign-key id="42" parent="31" name="usertable_role_fkey">
+      <ObjectId>16397</ObjectId>
+      <StateNumber>491</StateNumber>
       <ColNames>role</ColNames>
-      <RefTableId>32515</RefTableId>
+      <RefTableId>16387</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>role</RefTableName>
       <RefKeyName>role_pkey</RefKeyName>
