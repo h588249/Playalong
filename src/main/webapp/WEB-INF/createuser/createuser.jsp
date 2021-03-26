@@ -29,16 +29,16 @@
     <form method="post" action="register" class="form">
         <fieldset>
             <label for="username">Username:</label></br>
-            <input type="text" name="username" class="input" id="username" value="Olav"/>
+            <input type="text" name="username" class="input" id="username"/>
             </br>
             <label for="mail">Email:</label></br>
-            <input type="email" name="email" id="mail" class="input" value="Olav@Testing.no">
+            <input type="email" name="email" id="mail" class="input">
             </br>
             <label for="displayname">Displayname:</label></br>
-            <input type="text" name="displayname" id="displayname" class="input" value="Testing">
+            <input type="text" name="displayname" id="displayname" class="input">
             </br>
             <label for="password">Password:</label></br>
-            <input type="password" name="password" id="password" class="input" value="test123"/>
+            <input type="password" name="password" id="password" class="input"/>
             </br>
             <label for="passwordRep">Password repeated:</label></br>
             <input type="password" name="passwordRep" id="passwordRep" class="input"/>
