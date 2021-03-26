@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Playalong:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32e99270-14b4-4f54-811f-03486ed4ba9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Playalong_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createuser/createUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createuser/createUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login/logout.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TomEE 8.0.4" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 8.0.4" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Playalong:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Playalong_11" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60149" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Playalong:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1578" y="64" width="1071" height="758" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616751804870">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state x="-1578" y="64" width="1071" height="758" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751804870" />
+    <state width="0" height="0" key="GridCell.Tab.0.bottom" timestamp="1616751809633">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.bottom/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751809633" />
+    <state width="0" height="0" key="GridCell.Tab.0.center" timestamp="1616751809632">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.center/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751809632" />
+    <state width="0" height="0" key="GridCell.Tab.0.left" timestamp="1616751809632">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.left/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751809632" />
+    <state width="0" height="0" key="GridCell.Tab.0.right" timestamp="1616751809633">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.right/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751809633" />
+    <state width="1095" height="207" key="GridCell.Tab.1.bottom" timestamp="1616751757435">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.1.bottom/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757435" />
+    <state width="1095" height="207" key="GridCell.Tab.1.center" timestamp="1616751757434">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.1.center/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757434" />
+    <state width="1095" height="207" key="GridCell.Tab.1.left" timestamp="1616751757433">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.1.left/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757433" />
+    <state width="1095" height="207" key="GridCell.Tab.1.right" timestamp="1616751757434">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.1.right/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757434" />
+    <state width="1095" height="207" key="GridCell.Tab.2.bottom" timestamp="1616751757439">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.2.bottom/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757439" />
+    <state width="1095" height="207" key="GridCell.Tab.2.center" timestamp="1616751757437">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.2.center/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757437" />
+    <state width="1095" height="207" key="GridCell.Tab.2.left" timestamp="1616751757436">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.2.left/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757436" />
+    <state width="1095" height="207" key="GridCell.Tab.2.right" timestamp="1616751757437">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state width="1095" height="207" key="GridCell.Tab.2.right/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751757437" />
+  </component>
+</project>
