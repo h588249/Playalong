@@ -1,101 +1,90 @@
 package repository;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
-public class DatabaseRepository<T> implements Repository<T>
-{
-    private final Class<T> type;
-    EntityManagerFactory factory;
-
-    public DatabaseRepository(Class<T> type)
-    {
-        this.type = type;
-        factory = Persistence.createEntityManagerFactory("playalong");
-    }
+@Stateless
+public class DatabaseRepository<T> implements Repository<T> {
+    @PersistenceContext(name = "playalongPU")
+    private EntityManager em;
 
     // TODO: implement create
     @Override
-    public T create(T entity)
-    {
-        return null;
+    public T create(T entity) {
+        em.persist(entity);
+        return entity;
     }
 
     // TODO: implement create list
     @Override
-    public List<T> create(List<T> entities)
-    {
+    public List<T> create(List<T> entities) {
         return null;
     }
 
     // TODO: implement delete
     @Override
-    public void delete(T entity)
-    {
+    public void delete(T entity) {
 
     }
 
     // TODO: implement delete list
     @Override
-    public void delete(List<T> entities)
-    {
+    public void delete(List<T> entities) {
 
     }
 
     // TODO: implement get
     @Override
-    public T get(String query)
-    {
+    public T get(String query) {
         return null;
     }
 
     // TODO: implement get
     @Override
-    public T get(String query, Pair<String, Object> pair)
-    {
+    public T get(String query, Pair<String, Object> pair) {
         return null;
     }
 
     // TODO: implement get
     @Override
-    public T get(String query, List<Pair<String, Object>> pairs)
-    {
+    public T get(String query, List<Pair<String, Object>> pairs) {
+        return null;
+    }
+
+    @Override
+    public T getById(Object id) {
         return null;
     }
 
     // TODO: implement getlist
     @Override
-    public List<T> getList(String query)
-    {
+    public List<T> getList(String query) {
         return null;
     }
 
     // TODO: implement getlist
     @Override
-    public List<T> getList(String query, Pair<String, Object> pair)
-    {
+    public List<T> getList(String query, Pair<String, Object> pair) {
         return null;
     }
 
     // TODO: implement getlist
     @Override
-    public List<T> getList(String query, List<Pair<String, Object>> pairs)
-    {
+    public List<T> getList(String query, List<Pair<String, Object>> pairs) {
         return null;
     }
 
     // TODO: implement update
     @Override
-    public T update(T entity)
-    {
+    public T update(T entity) {
         return null;
     }
 
     // TODO: implement update list
     @Override
-    public List<T> update(List<T> entities)
-    {
+    public List<T> update(List<T> entities) {
         return null;
     }
 }
