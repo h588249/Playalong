@@ -14,7 +14,11 @@ public class DatabaseRepository<T> implements Repository<T>
     private EntityManager manager;
     private Class<T> type;
 
-    // DONE: implement create
+    /**
+     * Creates an entity
+     * @param entity
+     * @return persisted database entity
+     */
     @Override
     public T create(T entity)
     {
@@ -23,7 +27,11 @@ public class DatabaseRepository<T> implements Repository<T>
         return entity;
     }
 
-    // DONE: implement create list
+    /**
+     * Creates many entities
+     * @param entities
+     * @return persisted database entities
+     */
     @Override
     public List<T> create(List<T> entities)
     {
@@ -36,7 +44,10 @@ public class DatabaseRepository<T> implements Repository<T>
         return newEntities;
     }
 
-    // TODO: implement delete
+    /**
+     * Deletes an entity
+     * @param entity
+     */
     @Override
     public void delete(T entity)
     {
@@ -46,7 +57,10 @@ public class DatabaseRepository<T> implements Repository<T>
         }
     }
 
-    // TODO: implement delete list
+    /**
+     * Deletes many entities
+     * @param entities
+     */
     @Override
     public void delete(List<T> entities)
     {
@@ -59,7 +73,11 @@ public class DatabaseRepository<T> implements Repository<T>
         }
     }
 
-    // TODO: implement get
+    /**
+     * finds an entity based on the query
+     * @param query
+     * @return the found entity
+     */
     @Override
     public T get(String query)
     {
@@ -67,7 +85,12 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getSingleResult();
     }
 
-    // TODO: implement get
+    /**
+     * finds an entity based on the query
+     * @param query
+     * @param pair parameter for the query
+     * @return the found entity
+     */
     @Override
     public T get(String query, Pair<String, Object> pair)
     {
@@ -76,7 +99,12 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getSingleResult();
     }
 
-    // TODO: implement get
+    /**
+     * finds an entity based on the query
+     * @param query
+     * @param pairs parameters for the query
+     * @return the found entity
+     */
     @Override
     public T get(String query, List<Pair<String, Object>> pairs)
     {
@@ -88,13 +116,22 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getSingleResult();
     }
 
+    /**
+     * finds entity by id
+     * @param id
+     * @return the entity
+     */
     @Override
     public T getById(Object id)
     {
         return manager.find(type, id);
     }
 
-    // TODO: implement getlist
+    /**
+     * finds entities based on the query
+     * @param query
+     * @return the found entities
+     */
     @Override
     public List<T> getList(String query)
     {
@@ -102,7 +139,12 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getResultList();
     }
 
-    // TODO: implement getlist
+    /**
+     * finds entities based on the query
+     * @param query
+     * @param pair parameter for the query
+     * @return the found entities
+     */
     @Override
     public List<T> getList(String query, Pair<String, Object> pair)
     {
@@ -111,7 +153,12 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getResultList();
     }
 
-    // TODO: implement getlist
+    /**
+     * finds entities based on the query
+     * @param query
+     * @param pairs parameters for the query
+     * @return the found entities
+     */
     @Override
     public List<T> getList(String query, List<Pair<String, Object>> pairs)
     {
@@ -123,14 +170,22 @@ public class DatabaseRepository<T> implements Repository<T>
         return typedQuery.getResultList();
     }
 
-    // TODO: implement update
+    /**
+     * Updates the entity
+     * @param entity
+     * @return the updated entity
+     */
     @Override
     public T update(T entity)
     {
         return manager.merge(entity);
     }
 
-    // TODO: implement update list
+    /**
+     * updates the entities
+     * @param entities
+     * @return the updated entities
+     */
     @Override
     public List<T> update(List<T> entities)
     {
@@ -142,6 +197,10 @@ public class DatabaseRepository<T> implements Repository<T>
         return newEntities;
     }
 
+    /**
+     * Defines the entity type for searches
+     * @param type
+     */
     public void setType(Class<T> type)
     {
         this.type = type;
