@@ -13,7 +13,7 @@
     <form method="post" action="login">
         <div class="mainContainer">
             <h2 class="title">Login</h2>
-            <a class="link" href="registration">Register new participation</a>
+            <a class="link" href="register">Register new participation</a>
             <label class="container">
                 <span>Email:</span>
                 <input type="text" name="email" id="email"/>
