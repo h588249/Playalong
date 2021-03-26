@@ -18,4 +18,6 @@ public interface Repository<T>
     List<T> getList(String query, List<Pair<String, Object>> pairs);
     T update(T entity);
     List<T> update(List<T> entities);
+
+    void setType(Class<T> type);
 }
