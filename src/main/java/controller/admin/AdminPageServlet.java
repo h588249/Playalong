@@ -23,6 +23,7 @@ public class AdminPageServlet extends HttpServlet
 {
     @EJB
     private Repository<User> userRepository;
+    @EJB
     private Repository<Role> roleRepository;
 
 
