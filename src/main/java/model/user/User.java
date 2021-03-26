@@ -3,11 +3,11 @@ package model.user;
 import javax.persistence.*;
 
 @Entity(name = "user")
-@Table(schema = "dat109_project", name = "user")
+@Table(schema = "dat109_project", name = "usertable")
 public class User
 {
     @Id
-    private String username;
+    private String username;  // Olav-EG12
 
     @ManyToOne
     @JoinColumn(name = "role")

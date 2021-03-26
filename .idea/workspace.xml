@@ -10,12 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e99270-14b4-4f54-811f-03486ed4ba9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createuser/createuser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createuser/createuser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/index/IndexServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/admin/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/MappingUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/ServletUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/variables.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/temporary_admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/admin/AdminPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/admin/AdminPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +56,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TomEE 8.0.4" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 8.0.4" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -133,6 +161,10 @@
       <screen x="-2560" y="-215" width="2560" height="1351" />
     </state>
     <state x="-1578" y="64" width="1071" height="758" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616751804870" />
+    <state x="-1467" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1616759296339">
+      <screen x="-2560" y="-215" width="2560" height="1351" />
+    </state>
+    <state x="-1467" y="171" key="#com.intellij.ide.util.MemberChooser/-2560.-215.2560.1351/0.25.1920.1175@-2560.-215.2560.1351" timestamp="1616759296339" />
     <state width="1742" height="207" key="GridCell.Tab.0.bottom" timestamp="1616754135564">
       <screen x="-2560" y="-215" width="2560" height="1351" />
     </state>
