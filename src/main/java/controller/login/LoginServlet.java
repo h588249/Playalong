@@ -19,6 +19,8 @@ public class LoginServlet extends HttpServlet {
     @EJB
     private Repository<User> repo;
 
+    LoginDAO dao = null;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("UTF-8");
         String email = request.getParameter("email");
@@ -34,13 +36,16 @@ public class LoginServlet extends HttpServlet {
         session = request.getSession(true);
         session.setMaxInactiveInterval(3600); //Placeholder tid
 
-        LoginDAO dao = new LoginDAO(repo);
+
 
         //Checks if there is something wrong with the inputs
         if (email == null || password == null) {
             invalid(session, response);
             return;
         }
+
+        if(dao == null)
+            dao = new LoginDAO(repo);
 
         User user = dao.getUserWithEmail(email);
 
