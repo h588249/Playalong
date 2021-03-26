@@ -8,6 +8,6 @@ public class SongDAO extends AbstractDAO<Song>
 {
     public SongDAO()
     {
-        super(Song.class, new DatabaseRepository<>());
+        super(Song.class, null);
     }
 }
