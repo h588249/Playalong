@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         session = request.getSession(true);
-        session.setMaxInactiveInterval(3600);
+        session.setMaxInactiveInterval(3600); //Placeholder tid
 
         LoginDAO dao = new LoginDAO(repo);
 
@@ -54,16 +54,17 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        //As long as the "invalid" attribute does not exist or is not equal to true
-
-        session.setAttribute("email", email);
+        session.setAttribute("user_username", user.getUsername());
+        session.setAttribute("user_email", email);
+        session.setAttribute("user_role", user.getRole());
         session.setAttribute("validated", true);
 
-        response.sendRedirect("login");
+        response.sendRedirect("index");
     }
 
     private void invalid(HttpSession session, HttpServletResponse response) throws IOException {
         session.setAttribute("invalid", true);
+        session.setAttribute("errormessage", "Email or password does not match our records");
         response.sendRedirect("login");
     }
 
