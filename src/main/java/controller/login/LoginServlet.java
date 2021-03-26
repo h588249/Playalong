@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
         //If there is no session present forward to login
         if (session == null) {
             request.setAttribute("from", "");
-            request.getRequestDispatcher("login/login.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/login/login.jsp").forward(request, response);
             return;
         }
 
@@ -74,7 +74,7 @@ public class LoginServlet extends HttpServlet {
 
             session.invalidate();
 
-            request.getRequestDispatcher("login/login.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB_INF/login/login.jsp").forward(request, response);
 
             return;
         }

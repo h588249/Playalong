@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/eclipselink-2.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-42.2.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/eclipselink-2.7.7.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/postgresql-42.2.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

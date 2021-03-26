@@ -8,6 +8,6 @@ public class LoginDAO extends AbstractDAO<User>
 {
     public LoginDAO()
     {
-        super(User.class);
+        super(User.class, null);
     }
 }
