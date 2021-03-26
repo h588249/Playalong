@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    Test 2
+<a href="logout">
+    Log out
+</a>
 </body>
 </html>
