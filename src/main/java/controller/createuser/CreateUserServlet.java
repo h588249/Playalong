@@ -42,6 +42,6 @@ public class CreateUserServlet extends HttpServlet {
 
         request.getSession().setAttribute("user", u);
 
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("login");
     }
 }
