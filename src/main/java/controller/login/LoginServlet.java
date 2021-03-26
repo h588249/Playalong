@@ -19,6 +19,8 @@ public class LoginServlet extends HttpServlet {
     @EJB
     private Repository<User> repo;
 
+    LoginDAO dao = null;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("UTF-8");
         String email = request.getParameter("email");
@@ -32,15 +34,18 @@ public class LoginServlet extends HttpServlet {
         }
 
         session = request.getSession(true);
-        session.setMaxInactiveInterval(3600);
+        session.setMaxInactiveInterval(3600); //Placeholder tid
 
-        LoginDAO dao = new LoginDAO(repo);
+
 
         //Checks if there is something wrong with the inputs
         if (email == null || password == null) {
             invalid(session, response);
             return;
         }
+
+        if(dao == null)
+            dao = new LoginDAO(repo);
 
         User user = dao.getUserWithEmail(email);
 
@@ -54,16 +59,17 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        //As long as the "invalid" attribute does not exist or is not equal to true
-
-        session.setAttribute("email", email);
+        session.setAttribute("user_username", user.getUsername());
+        session.setAttribute("user_email", email);
+        session.setAttribute("user_role", user.getRole());
         session.setAttribute("validated", true);
 
-        response.sendRedirect("login");
+        response.sendRedirect("index");
     }
 
     private void invalid(HttpSession session, HttpServletResponse response) throws IOException {
         session.setAttribute("invalid", true);
+        session.setAttribute("errormessage", "Email or password does not match our records");
         response.sendRedirect("login");
     }
 
