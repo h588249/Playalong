@@ -17,6 +17,11 @@ public class AdminDAO extends AbstractDAO<User>
 
     public boolean confirmAdmin(String username, String email, Role role)
     {
+        if (!role.getRole().equals(Role.ADMIN))
+        {
+            return false;
+        }
+
         return repository.get(
                 "SELECT u FROM User u" +
                         "WHERE u.username = :username" +
@@ -29,4 +34,6 @@ public class AdminDAO extends AbstractDAO<User>
                     new Pair<>("role", role);
                 }}) != null;
     }
+
+    
 }

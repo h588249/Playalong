@@ -6,6 +6,14 @@ import javax.servlet.http.HttpSession;
 
 public class ServletUtility
 {
+    public static void initialize(Object nullable, Object initializer)
+    {
+        if (nullable == null)
+        {
+            nullable = initializer;
+        }
+    }
+
     public static boolean validate(HttpServletRequest request, HttpServletResponse response, String from)
     {
         HttpSession session = request.getSession(false);
