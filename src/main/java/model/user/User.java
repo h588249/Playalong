@@ -1,16 +1,16 @@
 package model.user;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity(name = "user")
 @Table(schema = "dat109_project", name = "usertable")
 public class User
 {
     @Id
-    private String username;  // Olav-EG12
+    private String username;
 
     @ManyToOne
-    @JoinColumn(name = "role")
     private Role role;
 
     private String email;
@@ -31,11 +31,6 @@ public class User
     public String getUsername()
     {
         return username;
-    }
-
-    public void setUsername(String username)
-    {
-        this.username = username;
     }
 
     public Role getRole()
@@ -76,5 +71,20 @@ public class User
     public void setPassword(String password)
     {
         this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        User user = (User)obj;
+        return Objects.equals(this.username, user.username) &&
+                Objects.equals(this.email, user.email) &&
+                Objects.equals(this.displayname, user.displayname) &&
+                Objects.equals(this.role, user.role) &&
+                Objects.equals(this.password, user.password);
     }
 }

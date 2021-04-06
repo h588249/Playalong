@@ -7,7 +7,7 @@ import repository.Repository;
 import repository.admin.AdminDAO;
 
 import static utility.MappingUtility.*;
-import static utility.ServletUtility.validate;
+import static utility.ServletUtility.*;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -26,19 +26,23 @@ public class AdminPageServlet extends HttpServlet
     @EJB
     private Repository<Role> roleRepository;
 
+    AdminDAO adminDAO = null;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        initialize(adminDAO, new AdminDAO(userRepository));
+
         if (!validate(request, response, ADMIN_URL))
         {
             response.sendRedirect(LOGIN_URL);
             return;
         }
+
         HttpSession session = request.getSession(false);
 
-        if (!new AdminDAO(userRepository).confirmAdmin(
+        if (!adminDAO.confirmAdmin(
                 (String)session.getAttribute("user_username"),
                 (String)session.getAttribute("user_email"),
                 (Role)session.getAttribute("user_role")))
@@ -53,9 +57,13 @@ public class AdminPageServlet extends HttpServlet
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        
+        initialize(adminDAO, new AdminDAO(userRepository));
+        HttpSession session = request.getSession(false);
+
+
+
     }
 }
