@@ -1,4 +1,4 @@
-package repository.createuser;
+package repository.registeruser;
 
 import model.user.User;
 import org.apache.commons.lang.RandomStringUtils;
@@ -6,14 +6,14 @@ import repository.AbstractDAO;
 import repository.Repository;
 import utility.PasswordUtility;
 
-public class CreateUserDAO extends AbstractDAO<User>
+public class RegisterUserDAO extends AbstractDAO<User>
 {
-    public CreateUserDAO(Repository<User> repository)
+    public RegisterUserDAO(Repository<User> repository)
     {
         super(User.class, repository);
     }
 
-    public synchronized User construct(String username, String email, String displayname, String password)
+    public User construct(String username, String email, String displayname, String password)
     {
         String uniqueName;
         do
