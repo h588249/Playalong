@@ -27,3 +27,5 @@ target/
 .project
 *.prefs
 *.settings
+.idea/workspace.xml
+src/main/webapp/WEB-INF/registeruser/createUser.jsp
