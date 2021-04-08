@@ -13,11 +13,7 @@
     <form method="post" action="login">
         <div class="mainContainer">
             <h2 class="title">Login</h2>
-<<<<<<< HEAD:src/main/webapp/jsp/login.jsp
-
-=======
             <a class="link" href="register">Register new participation</a>
->>>>>>> main:src/main/webapp/WEB-INF/login/login.jsp
             <label class="container">
                 <span>Email:</span>
                 </br>

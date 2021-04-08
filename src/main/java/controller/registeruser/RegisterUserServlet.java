@@ -37,16 +37,15 @@ public class RegisterUserServlet extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         String username = request.getParameter("username");
-        String displayname = request.getParameter("displayname");
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        User user = new RegisterUserDAO(repository).construct(username, email, displayname, password);
+        User user = new RegisterUserDAO(repository).construct(username, email, password);
 
         busPublisher.publish(new MessageEvent("Created user: [" + user.toString() + "]"));
 
-        user.toSession(session);
+        //user.toSession(session);
 
         response.sendRedirect(INDEX_URL);
     }

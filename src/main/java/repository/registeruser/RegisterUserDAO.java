@@ -13,7 +13,7 @@ public class RegisterUserDAO extends AbstractDAO<User>
         super(User.class, repository);
     }
 
-    public User construct(String username, String email, String displayname, String password)
+    public User construct(String username, String email, String password)
     {
         String uniqueName;
         do
@@ -23,6 +23,6 @@ public class RegisterUserDAO extends AbstractDAO<User>
         while (repository.getById(uniqueName) != null); // this should only fetch once, if no unique name is found, it
         // will repeat as long as no unique is found.
 
-        return repository.create(new User(uniqueName, email, displayname, PasswordUtility.encryptPassword(password)));
+        return repository.create(new User(uniqueName, email, username, PasswordUtility.encryptPassword(password)));
     }
 }
