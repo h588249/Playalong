@@ -1,6 +1,7 @@
 package model.user;
 
 import javax.persistence.*;
+import javax.servlet.http.HttpSession;
 import java.util.Objects;
 
 @Entity(name = "user")
@@ -11,6 +12,7 @@ public class User
     private String username;
 
     @ManyToOne
+    @JoinColumn(name = "role")
     private Role role;
 
     private String email;
@@ -27,6 +29,22 @@ public class User
         this.password = password;
     }
 
+    public User(String username)
+    {
+        this.username = username;
+    }
+
+    public static User fromSession(HttpSession session)
+    {
+        return new User((String)session.getAttribute("user_username"));
+    }
+
+    public void toSession(HttpSession session)
+    {
+        session.setAttribute("user_username", username);
+        session.setAttribute("user_email", email);
+        session.setAttribute("user_role", role.getRole());
+    }
 
     public String getUsername()
     {
@@ -86,5 +104,11 @@ public class User
                 Objects.equals(this.displayname, user.displayname) &&
                 Objects.equals(this.role, user.role) &&
                 Objects.equals(this.password, user.password);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "[username: " + username + ", email: " + email + "]";
     }
 }

@@ -3,15 +3,27 @@ package utility;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.util.Objects;
+
+import static utility.MappingUtility.LOGIN_URL;
 
 public class ServletUtility
 {
-    public static void initialize(Object nullable, Object initializer)
+    public static Object initialize(Object nullable, Object initializer)
     {
         if (nullable == null)
         {
             nullable = initializer;
         }
+        return nullable;
+    }
+
+    public static void invalidate(HttpSession session, HttpServletResponse response, String message) throws IOException
+    {
+        session.setAttribute("invalid", true);
+        session.setAttribute("errormessage", message);
+        response.sendRedirect(LOGIN_URL);
     }
 
     public static boolean validate(HttpServletRequest request, HttpServletResponse response, String from)

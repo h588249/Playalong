@@ -13,5 +13,6 @@
 <body>
     <h1>Bye</h1>
     <h2>You are now logged out</h2>
+    <a href="index">Back</a>
 </body>
 </html>
