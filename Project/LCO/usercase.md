@@ -25,7 +25,7 @@ The class diagram and domain model will be included in the second iteration. Thi
  ##### Log in module 
  1. The user writes their username and password and submits with the 'log in' button. A request will then be sent to the GET-Servlet. 
  2. If the submitted data is invalid, either username does not exist, or the password is incorrect the user will be redirected and asked to try again.
-3. If the user typed in correct username and password, the user will be forwarded and gain access to the main page, this will also create a unique session ID.
+ 3. If the user typed in correct username and password, the user will be forwarded and gain access to the main page, this will also create a unique session ID.
 
  ##### Log out module 
  1. The user presses the 'log out' button on the screen 
@@ -40,20 +40,20 @@ The class diagram and domain model will be included in the second iteration. Thi
  ##### Admin page module 
  1. A page for administrators which is used to make changes to the application.
  2. The admin can fetch lists with all the songs and customers. The administrators can also make changes to the application:
-•	add new songs
-•	remove songs
-•	filter songs into categories.
+ •	add new songs
+ •	remove songs
+ •	filter songs into categories.
 
  ##### Search module 
-1.	The customer types the name of a given song in the search bar and then searches by pressing the “search” button.
+ 1.	The customer types the name of a given song in the search bar and then searches by pressing the “search” button.
 
-2.	A request will then be sent to find out if the artist of the song exists in the database.
-3.    If the song does not exist, the page will be redirected with a message stating the song does not exist.
+ 2.	A request will then be sent to find out if the artist of the song exists in the database.
+ 3.    If the song does not exist, the page will be redirected with a message stating the song does not exist.
  4.If the song does exist, the customer will be forwarded to a servlet with a dynamic jsp file where the chosen song is displayed. 
 
-##### Search by category module 
-1.	The user checks a category and then presses search
-2.	A list of all the songs in the given category will then be displayed.
+ ##### Search by category module 
+ 1.	The user checks a category and then presses search
+ 2.	A list of all the songs in the given category will then be displayed.
 
 
  ##### Most played songs module 
