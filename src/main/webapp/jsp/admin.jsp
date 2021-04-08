@@ -15,12 +15,6 @@
             </br>
             <button type="button" id="add">Add files</button>
         </div>
-        <c:forEach items="${file}" var="f">
-            <input type="checkbox" id="${file.filename}" name="${file.filename}">
-        </c:forEach>
-        <c:forEach items="${user}" var="u">
-            <input type="checkbox" id="${user.username}" name="${user.username}">
-        </c:forEach>
         <select name="Actions">
             <option value="Promote">Promote</option>
             <option value="Demote">Demote</option>
@@ -48,8 +42,8 @@
     btnAdd.onclick = function (){
         input = document.createElement("input");
         input.type = "file";
-        b = document.createElement("br");
-        rem = document.createElement("button");
+        let b = document.createElement("br");
+        let rem = document.createElement("button");
         rem.type = "button";
         rem.innerText = "Remove";
         rem.class = "remove";
