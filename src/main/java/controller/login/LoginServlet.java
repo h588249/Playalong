@@ -1,6 +1,11 @@
 package controller.login;
 
-import javax.persistence.NoResultException;
+import model.user.User;
+import repository.Repository;
+import repository.login.LoginDAO;
+import utility.PasswordUtility;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +16,14 @@ import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
+    @EJB
+    private Repository<User> repo;
+
+    LoginDAO dao = null;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("UTF-8");
-        String username = request.getParameter("email");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
 
         //If a session exists invalidate it and create a new one
@@ -24,32 +34,42 @@ public class LoginServlet extends HttpServlet {
         }
 
         session = request.getSession(true);
-        session.setMaxInactiveInterval(10);
+        session.setMaxInactiveInterval(3600); //Placeholder tid
+
+
 
         //Checks if there is something wrong with the inputs
-        if (username == null || password == null)
-        //|| !dao.exists(username)) DB stuff for later
-        {
-            session.setAttribute("invalid", true);
-
-        } else {
-            //Checks if the given password equals the stored password
-            try {
-                //pass = dao.getPassword(username); DB
-                if (!password.equals("pass123") || !username.matches("[\\p{LD}]+@[\\p{L}]+\\.[\\p{Lower}]+")) //Proper checks later /\PasswordHelper.validate()
-                    session.setAttribute("invalid", true);
-
-            } catch (NoResultException e) {
-                e.printStackTrace();
-            }
+        if (email == null || password == null) {
+            invalid(session, response);
+            return;
         }
 
-        //As long as the "invalid" attribute does not exist or is not equal to true
-        if (session.getAttribute("invalid") == null || !session.getAttribute("invalid").equals(true)) {
-            session.setAttribute("username", username);
-            session.setAttribute("validated", true);
+        if(dao == null)
+            dao = new LoginDAO(repo);
+
+        User user = dao.getUserWithEmail(email);
+
+        if (user == null) {
+            invalid(session, response);
+            return;
         }
 
+        if (!PasswordUtility.checkPassword(password, user.getPassword())) {
+            invalid(session, response);
+            return;
+        }
+
+        session.setAttribute("user_username", user.getUsername());
+        session.setAttribute("user_email", email);
+        session.setAttribute("user_role", user.getRole());
+        session.setAttribute("validated", true);
+
+        response.sendRedirect("index");
+    }
+
+    private void invalid(HttpSession session, HttpServletResponse response) throws IOException {
+        session.setAttribute("invalid", true);
+        session.setAttribute("errormessage", "Email or password does not match our records");
         response.sendRedirect("login");
     }
 
@@ -59,7 +79,7 @@ public class LoginServlet extends HttpServlet {
         //If there is no session present forward to login
         if (session == null) {
             request.setAttribute("from", "");
-            request.getRequestDispatcher("login/login.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/login/login.jsp").forward(request, response);
             return;
         }
 
@@ -74,11 +94,12 @@ public class LoginServlet extends HttpServlet {
 
             session.invalidate();
 
-            request.getRequestDispatcher("login/login.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/login/login.jsp").forward(request, response);
 
             return;
         }
 
-        response.sendRedirect("demo.html");
+        //Change this when a main page has been implemented
+        response.sendRedirect("index.jsp");
     }
 }

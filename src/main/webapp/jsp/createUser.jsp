@@ -16,23 +16,14 @@
 <div id="container">
     <form method="post" action="register" class="form">
         <fieldset>
-            <label for="firstname">Firstname:</label></br>
-            <input type="text" name="firstname" class="input" id="firstname"/>
-            </br>
-            <label for="lastname">Surname:</label></br>
-            <input type="text" name="lastname" id="lastname" class="input"/>
-            </br>
-            <label for="address">Address:</label></br>
-            <input type="text" name="address" id="address" class="input">
-            </br>
-            <label for="mail">Mail:</label></br>
-            <input type="email" name="mail" id="mail" class="input">
-            </br>
             <label for="username">Username:</label></br>
-            <input type="text" name="username" id="username" class="input">
+            <input type="text" name="username" class="input" id="username"/>
             </br>
-            <label for="tlf">Mobile (8 ):</label></br>
-            <input type="text" name="tlf" id="tlf" class="input"/>
+            <label for="mail">Email:</label></br>
+            <input type="email" name="email" id="mail" class="input">
+            </br>
+            <label for="displayname">Displayname:</label></br>
+            <input type="text" name="displayname" id="displayname" class="input">
             </br>
             <label for="password">Password:</label></br>
             <input type="password" name="password" id="password" class="input"/>
