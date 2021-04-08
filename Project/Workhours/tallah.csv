@@ -1,4 +1,19 @@
 Date;Hours;Description
 21/3/9;2;Project Meeting
 21/3/10;3;Project Meeting
+<<<<<<< Updated upstream
 21/3/11;1;Working with iteration 1
+=======
+21/3/11;1;Making user cases plan
+21/3/12;2;Project Meeting
+
+Week 2:
+21/3/16;2;Project Meeting
+
+Week 3:
+21/3/23;1;Project Meeting
+21/3/24;4; Implementing validator class.
+
+Week 4:
+21/4/08;2; Final implementation of validator for beta
+>>>>>>> Stashed changes
