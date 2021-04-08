@@ -1,9 +1,11 @@
+package login;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static controller.validation.LoginValidator.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static controller.validation.Validator.*;
+
 
 
 public class LoginTest {
