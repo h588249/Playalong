@@ -10,4 +10,10 @@ public class MappingUtility
 
     public static final String LOGIN_URL = "login";
     public static final String LOGIN_PATH = "WEB-INF/login/login.jsp";
+
+    public static final String LOGOUT_URL = "logout";
+    public static final String LOGOUT_PATH = "WEB-INF/login/logout.jsp";
+
+    public static final String REGISTERUSER_URL = "register";
+    public static final String REGISTERUSER_PATH = "WEB-INF/registeruser/registeruser.jsp";
 }

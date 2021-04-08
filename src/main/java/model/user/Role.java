@@ -8,9 +8,10 @@ import java.util.Objects;
 @Table(schema = "dat109_project", name = "role")
 public class Role
 {
-    public static final Role ADMIN = new Role("Admin");
-    public static final Role MODERATOR = new Role("Moderator");
-    public static final Role REGULAR = new Role("Regular");
+    public static final Role ADMIN = new Role("ADMIN");
+    public static final Role MODERATOR = new Role("MODERATOR");
+    public static final Role ARTIST = new Role("ARTIST");
+    public static final Role REGULAR = new Role("REGULAR");
 
     @Id
     private String role;

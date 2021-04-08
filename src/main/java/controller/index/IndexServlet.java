@@ -18,6 +18,6 @@ public class IndexServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-
+        request.getRequestDispatcher(INDEX_PATH).forward(request, response);
     }
 }
