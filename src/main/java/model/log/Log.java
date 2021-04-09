@@ -16,6 +16,8 @@ public class Log
     private int id;
 
     private Long timestamp;
+
+    @Column(name = "message_type")
     private String messageType;
     private String message;
 
