@@ -18,4 +18,7 @@ public class MappingUtility
     public static final String REGISTERUSER_PATH = "jsp/createUser.jsp";
 
     public static final String SEARCH_URL = "search";
+
+    public static final String IMPORT_URL = "import";
+    public static final String DISPLAY_URL = "display";
 }
