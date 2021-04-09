@@ -27,10 +27,13 @@
             <img src="C:\Users\mathi\Pictures\Dat109Project\icon.png" id="img" alt="HamburgerList">
         </div>
         <h1>Welcome</h1>
+        <label for="search">Search:</label>
+        <input type="text" id="search" class="input" name="search"/>
         <form action="search" method="post">
-            <label for="search">Search:</label>
-            <input type="text" id="search" class="input" name="search"/>
-            <button type="submit">Press me</button>
+            <div id="listSongs">
+
+                <button type="submit">Press me</button>
+            </div>
         </form>
         <div id="top10">
 
@@ -47,6 +50,27 @@
     let img = document.getElementById("img");
     let div = document.getElementById("top10");
     let list = document.getElementById("list");
+
+    let listSongs = document.getElementById("listSongs");
+    let songs = '${songs}'.replaceAll(/[\[\]]/g,"").split(", "); //change to a better solution when completed
+    let search = document.getElementById("search");
+
+    search.onclick = function(){
+        console.log("page loaded.")
+        for (let song of songs){
+            let temp = document.createElement("input");
+            temp.name = "select_song";
+            temp.type = "radio";
+            temp.value = song;
+
+            let label = document.createElement("label");
+            label.innerHTML = song;
+
+            listSongs.appendChild(temp);
+            listSongs.appendChild(label);
+
+        }
+    }
 
     ham.onmouseenter = function () {
         img.src = 'imgs/iconShadow.png';
