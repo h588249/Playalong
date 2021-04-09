@@ -11,11 +11,11 @@
     <title>Main</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <style>
-        .modal-content{
+        .modal-content {
             display: none;
         }
 
-        #list{
+        #list {
             display: none;
         }
     </style>
@@ -27,8 +27,11 @@
             <img src="C:\Users\mathi\Pictures\Dat109Project\icon.png" id="img" alt="HamburgerList">
         </div>
         <h1>Welcome</h1>
-        <label for="search">Search:</label>
-        <input type="text" id="search" class="input" />
+        <form action="search" method="post">
+            <label for="search">Search:</label>
+            <input type="text" id="search" class="input" name="search"/>
+            <button type="submit">Press me</button>
+        </form>
         <div id="top10">
 
         </div>
@@ -45,13 +48,13 @@
     let div = document.getElementById("top10");
     let list = document.getElementById("list");
 
-    ham.onmouseenter = function(){
+    ham.onmouseenter = function () {
         img.src = 'imgs/iconShadow.png';
     }
-    ham.onmouseleave = function(){
+    ham.onmouseleave = function () {
         img.src = 'imgs/icon.png';
     }
-    ham.onclick = function(){
+    ham.onclick = function () {
         list.style.display = "block";
     }
 </script>
