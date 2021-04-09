@@ -14,3 +14,5 @@ Date;Hours;Description
 21/3/26;1;Login and logout completed
 21/3/26;1;Design meeting
 21/4/9;3;Search functionality implementation
+21/4/9;2;Import comp servlet and general cleanup
+21/4/9;2;Import comp servlet update, search servlet fix, database connection and updated mapping
