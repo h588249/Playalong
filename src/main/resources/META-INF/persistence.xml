@@ -9,6 +9,7 @@
         <jta-data-source>PlayalongDS</jta-data-source>
         <class>model.user.User</class>
         <class>model.user.Role</class>
+        <class>model.song.Song</class>
 
         <properties>
             <property name="eclipselink.weaving" value="false"/>
