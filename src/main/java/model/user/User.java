@@ -16,16 +16,18 @@ public class User
     private Role role;
 
     private String email;
-    private String displayname;
+
+    @Column(name = "display_name")
+    private String displayName;
     private String password; // salt + hash
 
     public User(){}
 
-    public User(String username, String email, String displayname, String password)
+    public User(String username, String email, String displayName, String password)
     {
         this.username = username;
         this.email = email;
-        this.displayname = displayname;
+        this.displayName = displayName;
         this.password = password;
     }
 
@@ -43,7 +45,7 @@ public class User
     {
         session.setAttribute("user_username", username);
         session.setAttribute("user_email", email);
-        session.setAttribute("user_role", role.getRole());
+        session.setAttribute("user_role", role == null ? "" : role.getRole()); // PLACEHOLDER FOR NOW
     }
 
     public String getUsername()
@@ -71,14 +73,14 @@ public class User
         this.email = email;
     }
 
-    public String getDisplayname()
+    public String getDisplayName()
     {
-        return displayname;
+        return displayName;
     }
 
-    public void setDisplayname(String displayname)
+    public void setDisplayName(String displayname)
     {
-        this.displayname = displayname;
+        this.displayName = displayname;
     }
 
     public String getPassword()
@@ -101,7 +103,7 @@ public class User
         User user = (User)obj;
         return Objects.equals(this.username, user.username) &&
                 Objects.equals(this.email, user.email) &&
-                Objects.equals(this.displayname, user.displayname) &&
+                Objects.equals(this.displayName, user.displayName) &&
                 Objects.equals(this.role, user.role) &&
                 Objects.equals(this.password, user.password);
     }
