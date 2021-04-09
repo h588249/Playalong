@@ -45,7 +45,7 @@ public class User
     {
         session.setAttribute("user_username", username);
         session.setAttribute("user_email", email);
-        session.setAttribute("user_role", role.getRole());
+        session.setAttribute("user_role", role == null ? "" : role.getRole()); // PLACEHOLDER FOR NOW
     }
 
     public String getUsername()
