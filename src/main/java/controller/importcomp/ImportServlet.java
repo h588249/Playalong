@@ -26,36 +26,35 @@ public class ImportServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect(IMPORT_URL);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(!validate(req, resp, IMPORT_URL)){
             resp.sendRedirect(LOGIN_URL);
             return;
         }
 
-        String songName = req.getParameter("song_name");
+        HttpSession session = req.getSession(false);
 
-        if(songName == null){
+        Object o = session.getAttribute("song_name");
+
+        if(o == null || o.getClass() != String.class){
             resp.sendRedirect(INDEX_URL);
             return;
         }
 
         dao = (SongDAO) initialize(dao, new SongDAO(repository));
-
-        Song song = dao.findSongWithName(songName);
+        Song song = dao.findSongWithName((String) o);
 
         if(song == null){
             resp.sendRedirect(INDEX_URL);
             return;
         }
 
-        HttpSession session = req.getSession(false);
-
         session.setAttribute("song", song);
 
         resp.sendRedirect(DISPLAY_URL);
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect(INDEX_URL);
     }
 }
