@@ -9,19 +9,7 @@
 <html>
 <head>
     <title>Sign up</title>
-    <style>
-        body {
-            width: 60%;
-            margin: 5px auto;
-            padding: 10px;
-        }
-
-        .input{
-            padding: 3px;
-            margin: 5px;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <h2>Sign up</h2>
@@ -43,7 +31,9 @@
             <label for="passwordRep">Password repeated:</label></br>
             <input type="password" name="passwordRep" id="passwordRep" class="input"/>
             </br>
-            <button type="submit">Create user</button>
+            <div class="containerButton">
+                <button type="submit">Create user</button>
+            </div>
         </fieldset>
     </form>
 </div>
