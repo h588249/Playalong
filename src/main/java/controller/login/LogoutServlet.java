@@ -1,5 +1,6 @@
 package controller.login;
 
+import static utility.MappingUtility.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "LogoutServlet", value = "/logout")
+@WebServlet(name = "LogoutServlet", value = "/" + LOGOUT_URL)
 public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("logout");
+        resp.sendRedirect(LOGOUT_URL);
     }
 
     @Override
@@ -21,6 +22,6 @@ public class LogoutServlet extends HttpServlet {
 
         if (session != null) session.invalidate();
 
-        req.getRequestDispatcher("login/logout.jsp").forward(req, resp);
+        req.getRequestDispatcher(LOGOUT_PATH).forward(req, resp);
     }
 }
