@@ -2,6 +2,7 @@
 
 **Agenda:** Vise frem det vi har til atle 
 
+I uke 16 skal vi ha en presentasjon av prosjektet 
 **Hva som forventes av presentasjonen:**
 - Liten demo 
 - Forteller hvordan prosjektet har vært 
