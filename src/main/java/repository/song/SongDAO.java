@@ -30,7 +30,7 @@ public class SongDAO extends AbstractDAO<Song> {
      * Attempts to get a song with the given name
      *
      * @param songName The name of the song
-     * @return A song which has "name" as name or null if no song was found
+     * @return A song which has "songName" as name or null if no song was found
      */
     public Song findSongWithName(String songName) {
         return repository.get(
