@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CreateUserServlet", value = "/" + REGISTERUSER_URL)
+@WebServlet(name = "CreateUserServlet", value = "/" + REGISTER_USER_URL)
 public class RegisterUserServlet extends HttpServlet
 {
     @EJB
@@ -29,7 +29,7 @@ public class RegisterUserServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
 
-        request.getRequestDispatcher(REGISTERUSER_PATH).forward(request, response);
+        request.getRequestDispatcher(REGISTER_USER_PATH).forward(request, response);
 
     }
 
