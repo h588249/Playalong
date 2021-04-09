@@ -2,7 +2,6 @@
 
 **Agenda:** Vise frem det vi har til atle 
 
-
 **Hva som forventes av presentasjonen:**
 - Liten demo 
 - Forteller hvordan prosjektet har vært 
