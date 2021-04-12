@@ -35,6 +35,12 @@
                 <button type="submit">Press me</button>
             </div>
         </form>
+        <div>
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">press me</button>
+            </form>
+        </div>
         <div id="top10">
 
         </div>

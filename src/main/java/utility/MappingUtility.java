@@ -22,4 +22,6 @@ public class MappingUtility
     public static final String IMPORT_URL = "import";
 
     public static final String DISPLAY_URL = "display";
+
+    public static final String FILE_UPLOAD_URL = "upload";
 }
