@@ -9,12 +9,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class PDFToPng {
-    public static void convert(File pdf) {
+    public static void convert(String uploadDir, File pdf) {
         try {
-            File destinationFile = new File("/" + pdf.getName());
+            File destinationFile = new File(uploadDir);
 
             if (!destinationFile.exists()) {
-                destinationFile.mkdir();
+                destinationFile.mkdirs();
                 System.out.println("Folder Created -> " + destinationFile.getAbsolutePath());
             }
 
@@ -36,7 +36,11 @@ public class PDFToPng {
                 int dpi = 300;// use less dpi for to save more space in harddisk. For professional usage you can use more than 300dpi
 
                 for (int i = 0; i < numberOfPages; ++i) {
-                    File outPutFile = new File(destinationFile.getName() + fileName + "_" + i + "." + fileExtension);
+                    File outPutFile = new File(destinationFile.getAbsolutePath() + File.separator + fileName + "_" + i + "." + fileExtension);
+                    System.out.println(outPutFile.getAbsolutePath());
+                    if (!outPutFile.exists())
+                        outPutFile.createNewFile();
+
                     BufferedImage bImage = pdfRenderer.renderImageWithDPI(i, dpi, ImageType.RGB);
                     ImageIO.write(bImage, fileExtension, outPutFile);
                 }
