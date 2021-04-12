@@ -37,7 +37,11 @@
         </form>
         <div>
             <form action="upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="file">
+                <label>
+                    Song name
+                    <input type="text" name="song_name" required>
+                </label>
+                <input type="file" name="file" required>
                 <button type="submit">press me</button>
             </form>
         </div>
