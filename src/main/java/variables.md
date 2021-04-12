@@ -1,7 +1,8 @@
 ### Variable tracking and summary
 
 ##### User session attributes:
->Logged in username:  
+
+> Logged in username:  
 ``user_username``  
 Logged in email:  
 ``user_email``  
@@ -14,13 +15,14 @@ Name of chosen song:
 Chosen song object:  
 ``song``
 
-  
 ##### Routing variables:
->previous page:  
+
+> previous page:  
 ``from``
 
 ##### Static routing variables:
->Index:  
+
+> Index:  
 ``INDEX_URL``  
 ``INDEX_PATH``  
 Admin:  
@@ -43,5 +45,33 @@ Display:
 ``DISPLAY_URL``
 
 ##### Messages
->Message  
-``Regular message``  
+
+> Message  
+``Regular message``
+
+#### File structure
+
+```bash
+.(getServletContext().getRealPath(""))
+└── upload
+    ├── song_name0
+    │   ├── song.pdf
+    │   ├── images (image representation of the pdf)
+    │   │   ├── song0.png
+    │   │   └── song1.png
+    │   └── sound
+    │       └── sound0.mp3  
+    ├── song_name1
+    │   ├── song_type0.pdf
+    │   ├── song_type1.pdf
+    │   ├── images
+    │   │   ├── song_type0
+    │   │   │   ├── song_type00.png
+    │   │   │   └── song_type01.png
+    │   │   └── song_type1    
+    │   │       └── song_type10.png
+    │   └── sound
+    │       ├── sound0.mp3
+    │       └── sound1.mp3
+    ...
+```
