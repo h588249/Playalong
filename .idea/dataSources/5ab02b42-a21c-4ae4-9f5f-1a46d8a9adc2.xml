@@ -865,7 +865,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>dat109_v21_prosjekt12</Owner>
-      <IntrospectionStateNumber>53001</IntrospectionStateNumber>
+      <IntrospectionStateNumber>52995</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|181047|181049|1
 </Relations>
@@ -4174,7 +4174,7 @@ false Zulu
       <ObjectId>181031</ObjectId>
       <StateNumber>52988</StateNumber>
       <Owner>dat109_v21_prosjekt12</Owner>
-      <IntrospectionStateNumber>53002</IntrospectionStateNumber>
+      <IntrospectionStateNumber>52996</IntrospectionStateNumber>
     </schema>
     <schema id="748" parent="15" name="information_schema">
       <ObjectId>13158</ObjectId>
