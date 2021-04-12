@@ -19,13 +19,8 @@ public class Song {
 
     private int duration;
 
-    @Column(name = "notes_eb")
-    private Byte[] notes_Eb;
-
-    @Column(name = "notes_bb")
-    private Byte[] notes_Bb;
-
-    private Byte[] sound;
+    @Column(name = "song_directory")
+    private String songDirectory;
 
     public Song(String name, String artist, String mainInstrument, int duration) {
         this.name = name;
@@ -67,5 +62,13 @@ public class Song {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public String getSongDirectory() {
+        return songDirectory;
+    }
+
+    public void setSongDirectory(String songDirectory) {
+        this.songDirectory = songDirectory;
     }
 }
