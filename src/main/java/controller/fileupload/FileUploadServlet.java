@@ -1,5 +1,7 @@
 package controller.fileupload;
 
+import utility.PDFToPng;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -11,8 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static utility.MappingUtility.FILE_UPLOAD_URL;
-import static utility.MappingUtility.INDEX_PATH;
+import static utility.MappingUtility.*;
 
 @WebServlet(name = "FileUploadServlet", value = "/" + FILE_UPLOAD_URL)
 @MultipartConfig(fileSizeThreshold = 1024 * 1024,
@@ -31,18 +32,46 @@ public class FileUploadServlet extends HttpServlet {
         return "file.name";
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String songName = request.getParameter("song_name");
 
-        String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
-        File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists())
-            uploadDir.mkdir();
+        if (songName == null) {
+            response.sendRedirect(INDEX_URL);
+            return;
+        }
+
+        // TODO - Create song object(parameters from jsp) and save to db after everything has been executed successfully
+
+        String uploadPath = getServletContext().getRealPath("")
+                + File.separator + UPLOAD_DIRECTORY
+                + File.separator + songName.replaceAll(" ", "_");
+
+        String soundUpload = uploadPath + File.separator + "sound";
+
+        File soundDir = new File(soundUpload);
+        if (!soundDir.exists())
+            soundDir.mkdirs();
 
         try {
             String fileName = "";
             for (Part part : request.getParts()) {
-                fileName = getFileName(part);
+                fileName = getFileName(part).replaceAll(" ", "_");
+
+                // Compile regex in init() for better performance
+                if (fileName.matches(".*\\.(mp3|wav|m4a|flac|wma|aac)$")) {
+                    part.write(soundUpload + File.separator + fileName);
+                    continue;
+                }
+
+                if (!fileName.endsWith(".pdf")) continue;
+
                 part.write(uploadPath + File.separator + fileName);
+
+                PDFToPng.convert(uploadPath + File.separator + "images"
+                        + File.separator + fileName.replaceAll("(\\.pdf)$", ""),
+                        new File(uploadPath + File.separator + fileName));
+
             }
             request.setAttribute("message", "File " + fileName + " has uploaded successfully!");
 
