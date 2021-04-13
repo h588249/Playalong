@@ -20,7 +20,7 @@ import static utility.MappingUtility.*;
         maxFileSize = 1024 * 1024 * 5,
         maxRequestSize = 1024 * 1024 * 5 * 5)
 public class FileUploadServlet extends HttpServlet {
-    private final String UPLOAD_DIRECTORY = "upload";
+    private final String UPLOAD_DIRECTORY = "WEB-INF" + File.separator + "upload";
 
     private static final long serialVersionUID = 1L;
 
@@ -69,7 +69,7 @@ public class FileUploadServlet extends HttpServlet {
                 part.write(uploadPath + File.separator + fileName);
 
                 PDFToPng.convert(uploadPath + File.separator + "images"
-                        + File.separator + fileName.replaceAll("(\\.pdf)$", ""),
+                                + File.separator + fileName.replaceAll("(\\.pdf)$", ""),
                         new File(uploadPath + File.separator + fileName));
 
             }

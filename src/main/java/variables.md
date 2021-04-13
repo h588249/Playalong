@@ -52,26 +52,28 @@ Display:
 #### File structure
 
 ```bash
-.(getServletContext().getRealPath(""))
-└── upload
-    ├── song_name0
-    │   ├── song.pdf
-    │   ├── images (image representation of the pdf)
-    │   │   ├── song0.png
-    │   │   └── song1.png
-    │   └── sound
-    │       └── sound0.mp3  
-    ├── song_name1
-    │   ├── song_type0.pdf
-    │   ├── song_type1.pdf
-    │   ├── images
-    │   │   ├── song_type0
-    │   │   │   ├── song_type00.png
-    │   │   │   └── song_type01.png
-    │   │   └── song_type1    
-    │   │       └── song_type10.png
-    │   └── sound
-    │       ├── sound0.mp3
-    │       └── sound1.mp3
-    ...
+./ (getServletContext().getRealPath(""))
+├── WEB-INF/
+│   ├── upload/
+│   │   ├── song_name0/
+│   │   │   ├── song.pdf
+│   │   │   ├── images/ (image representation of the pdf)
+│   │   │   │   ├── song0.png
+│   │   │   │   └── song1.png
+│   │   │   └── sound/
+│   │   │       └── sound0.mp3  
+│   │   ├── song_name1/
+│   │   │   ├── song_type0.pdf
+│   │   │   ├── song_type1.pdf
+│   │   │   ├── images/
+│   │   │   │   ├── song_type0/
+│   │   │   │   │   ├── song_type00.png
+│   │   │   │   │   └── song_type01.png
+│   │   │   │   └── song_type1/    
+│   │   │   │       └── song_type10.png
+│   │   │   └── sound/
+│   │   │       ├── sound0.mp3
+│   │   │       └── sound1.mp3
+│   │   │
+... 
 ```
