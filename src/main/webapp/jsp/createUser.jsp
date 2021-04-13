@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Sign up</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/css/main.css">
 </head>
 <body>
 <h2>Sign up</h2>
