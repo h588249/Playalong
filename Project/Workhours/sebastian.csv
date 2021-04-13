@@ -18,3 +18,5 @@ Date;Hours;Description
 21/4/9;2;Import comp servlet update, search servlet fix, database connection and updated mapping
 21/4/9;2;File upload servlet and pdf to image converter
 21/4/13;2;Improved file handling, minor db changes
+21/4/13;1;Changed folder location
+21/4/13;1;File handling servlet changes
