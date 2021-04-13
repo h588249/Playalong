@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e99270-14b4-4f54-811f-03486ed4ba9a" name="Default Changelist" comment="">
-
       <change afterPath="$PROJECT_DIR$/src/main/java/model/log/Log.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/utility/MessageEvent.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/utility/eventbus/Event.java" afterDir="false" />
@@ -89,17 +88,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.LoginTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Playalong" />
       <option name="PACKAGE_NAME" value="" />
@@ -197,6 +185,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.LoginTest" />
+      <item itemvalue="TomEE Server.TomEE 8.0.4" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoginTest" />

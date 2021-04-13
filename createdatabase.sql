@@ -44,9 +44,7 @@ CREATE TABLE song
     artist     VARCHAR(32) NOT NULL,
     instrument VARCHAR(32) NOT NULL,
     duration   INTEGER     NOT NULL,
-    notes_Bb   bytea,
-    notes_Eb   bytea,
-    sound      bytea       NOT NULL,
+    song_directory VARCHAR(32) NOT NULL,
     PRIMARY KEY (song_name)
 );
 

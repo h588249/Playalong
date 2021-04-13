@@ -31,8 +31,7 @@ public class SearchServlet extends HttpServlet {
 
         String select_song = req.getParameter("select_song");
 
-        // Could remove this if searching for nothing should return every song
-        if (Objects.equals(select_song, "")) {
+        if (select_song == null || (select_song = select_song.trim()).isEmpty()) {
             resp.sendRedirect(INDEX_URL);
             return;
         }

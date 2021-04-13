@@ -18,6 +18,13 @@
           <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
           <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:2.0.23" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:2.0.23" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox-tools:2.0.23" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox-debugger:2.0.23" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.8.0" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
