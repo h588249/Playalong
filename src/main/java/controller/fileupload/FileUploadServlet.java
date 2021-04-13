@@ -1,5 +1,6 @@
 package controller.fileupload;
 
+import repository.song.SongDAO;
 import utility.PDFToPng;
 
 import javax.servlet.ServletException;
@@ -22,7 +23,9 @@ import static utility.MappingUtility.*;
 public class FileUploadServlet extends HttpServlet {
     private final String UPLOAD_DIRECTORY = "WEB-INF" + File.separator + "upload";
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -242147305764279714L;
+
+    private SongDAO songDAO = null;
 
     private String getFileName(Part part) {
         for (String content : part.getHeader("content-disposition").split(";")) {
@@ -75,10 +78,9 @@ public class FileUploadServlet extends HttpServlet {
             }
             request.setAttribute("message", "File " + fileName + " has uploaded successfully!");
 
-
         } catch (FileNotFoundException fne) {
             request.setAttribute("message", "There was an error: " + fne.getMessage());
         }
-        getServletContext().getRequestDispatcher("/" + INDEX_PATH).forward(request, response);
+        response.sendRedirect(INDEX_URL);
     }
 }
