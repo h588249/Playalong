@@ -79,23 +79,25 @@
 </div>
 
 <script>
-    // let notes = '${notes}';
-    // let audio = new Audio('${audio}');
+    //let notes = '${notes}';
+    //let audio = new Audio('${audio.sound}');
     let play = document.getElementById("playbutton");
     let imgDiv = document.getElementById("noteimg");
 
     document.onload = function (){
-        //note = document.createElement("");
+        //note = document.createElement("img");
+        //note.id = "notes";
+        //note.src = "notes";
         //imgDiv.appendChild(note);
     }
 
     play.onclick = function(){
         if(play.value == "play"){
-            // audio.play();
+            //audio.play();
             play.value = "pause";
         }
         else{
-            // audio.pause();
+            //audio.pause();
             play.value = "play";
         }
 
