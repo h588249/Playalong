@@ -22,43 +22,32 @@
 </head>
 <body>
 <main>
-    <div class="main">
-        <div id="ham">
-            <img src="C:\Users\mathi\Pictures\Dat109Project\icon.png" id="img" alt="HamburgerList">
-        </div>
-        <h1>Welcome</h1>
-        <label for="search">Search:</label>
-        <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
-        <form action="search" method="post">
-            <div id="listSongs">
-                <button type="submit">Press me</button>
-                <ul id="songList">
+    <h1>Welcome</h1>
+    <label for="search">Search:</label>
+    <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
+    <form action="search" method="post">
+        <div id="listSongs">
+            <button type="submit">Press me</button>
+            <ul id="songList">
 
-                </ul>
-            </div>
+            </ul>
+        </div>
+    </form>
+    <div>
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <label>
+                Song name
+                <input type="text" name="song_name" required>
+            </label>
+            <input type="file" name="file" required>
+            <button type="submit">press me</button>
         </form>
-        <div>
-            <form action="upload" method="post" enctype="multipart/form-data">
-                <label>
-                    Song name
-                    <input type="text" name="song_name" required>
-                </label>
-                <input type="file" name="file" required>
-                <button type="submit">press me</button>
-            </form>
-        </div>
-        <div id="top10">
+    </div>
+    <div id="top10">
 
-        </div>
     </div>
 </main>
-<aside>
-    <div id="list">
-        <p>Hei</p>
-    </div>
-</aside>
 <script>
-    let ham = document.getElementById("ham");
     let img = document.getElementById("img");
     let div = document.getElementById("top10");
     let list = document.getElementById("list");
@@ -107,16 +96,6 @@
                 li[i].style.display = "none";
             }
         }
-    }
-
-    ham.onmouseenter = function () {
-        img.src = 'imgs/iconShadow.png';
-    }
-    ham.onmouseleave = function () {
-        img.src = 'imgs/icon.png';
-    }
-    ham.onclick = function () {
-        list.style.display = "block";
     }
 </script>
 </body>
