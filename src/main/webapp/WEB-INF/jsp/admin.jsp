@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
     <title>Admin</title>
 </head>
 <body>

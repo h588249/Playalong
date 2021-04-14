@@ -32,11 +32,13 @@
         </div>
         <h1>Welcome</h1>
         <label for="search">Search:</label>
-        <input type="text" id="search" class="input" name="search"/>
+        <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
         <form action="search" method="post">
             <div id="listSongs">
-
                 <button type="submit">Press me</button>
+                <ul id="songList">
+
+                </ul>
             </div>
         </form>
         <div>
@@ -79,7 +81,14 @@
 
     search.onclick = function(){
         console.log("page loaded.")
+        songList = document.getElementById("songList");
         for (let song of songs){
+            let child = document.createElement("li");
+            child.innerHTML = song;
+            songList.appendChild(child);
+
+            
+            /*
             let temp = document.createElement("input");
             temp.name = "select_song";
             temp.type = "radio";
@@ -90,7 +99,25 @@
 
             listSongs.appendChild(temp);
             listSongs.appendChild(label);
+            */
+        }
+    }
 
+    function searchFunction(){
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("songList");
+        li = ul.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++){
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if(txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
         }
     }
 
