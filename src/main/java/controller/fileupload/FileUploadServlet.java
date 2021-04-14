@@ -18,8 +18,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static utility.MappingUtility.FILE_UPLOAD_URL;
-import static utility.MappingUtility.INDEX_URL;
+import static utility.MappingUtility.*;
 import static utility.ServletUtility.libraryValidate;
 import static utility.ServletUtility.validate;
 
@@ -49,7 +48,7 @@ public class FileUploadServlet extends HttpServlet {
             throws ServletException, IOException {
 
         if (!libraryValidate(request, response, FILE_UPLOAD_URL)) {
-            response.sendRedirect(INDEX_URL);
+            response.sendRedirect(REGISTER_USER_URL);
             return;
         }
 
@@ -106,5 +105,10 @@ public class FileUploadServlet extends HttpServlet {
             request.setAttribute("message", "There was an error: " + fne.getMessage());
         }
         response.sendRedirect(INDEX_URL);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect(INDEX_URL);
     }
 }
