@@ -9,65 +9,74 @@
 <html>
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/css/main.css">
-    <style>
-        .modal-content {
-            display: none;
-        }
-
-        #list {
-            display: none;
-        }
-    </style>
+    <link href="${pageContext.request.contextPath}/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
 </head>
 <body>
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="logo">
+            <a href="#" class="nav-link">
+                <img src="${pageContext.request.contextPath}/resources/logo.png" width="32" height="32"/>
+                <%--                    <i class="fas fa-bars"></i>--%>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fas fa-play"></i>
+                <span class="link-text">Music</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fas fa-file-audio"></i>
+                <span class="link-text">Upload</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fas fa-sliders-h"></i>
+                <span class="link-text">Settings</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 <main>
-    <div class="main">
-        <div id="ham">
-            <img src="C:\Users\mathi\Pictures\Dat109Project\icon.png" id="img" alt="HamburgerList">
-        </div>
-        <h1>Welcome</h1>
-        <label for="search">Search:</label>
-        <input type="text" id="search" class="input" name="search"/>
-        <form action="search" method="post">
-            <div id="listSongs">
+    <h1>Welcome</h1>
+    <label for="search">Search:</label>
+    <input type="text" id="search" class="input" name="search"/>
+    <form action="search" method="post">
+        <div id="listSongs">
 
-                <button type="submit">Press me</button>
-            </div>
+            <button type="submit">Press me</button>
+        </div>
+    </form>
+    <div>
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <label>
+                Song name
+                <input type="text" name="song_name" required>
+            </label>
+            <input type="file" name="file" required>
+            <button type="submit">press me</button>
         </form>
-        <div>
-            <form action="upload" method="post" enctype="multipart/form-data">
-                <label>
-                    Song name
-                    <input type="text" name="song_name" required>
-                </label>
-                <input type="file" name="file" required>
-                <button type="submit">press me</button>
-            </form>
-        </div>
-        <div id="top10">
+    </div>
+    <div id="top10">
 
-        </div>
     </div>
 </main>
-<aside>
-    <div id="list">
-        <p>Hei</p>
-    </div>
-</aside>
 <script>
-    let ham = document.getElementById("ham");
     let img = document.getElementById("img");
     let div = document.getElementById("top10");
     let list = document.getElementById("list");
 
     let listSongs = document.getElementById("listSongs");
-    let songs = '${songs}'.replaceAll(/[\[\]]/g,"").split(", "); //change to a better solution when completed
+    let songs = '${songs}'.replaceAll(/[\[\]]/g, "").split(", "); //change to a better solution when completed
     let search = document.getElementById("search");
 
-    search.onclick = function(){
+    search.onclick = function () {
         console.log("page loaded.")
-        for (let song of songs){
+        for (let song of songs) {
             let temp = document.createElement("input");
             temp.name = "select_song";
             temp.type = "radio";
@@ -80,16 +89,6 @@
             listSongs.appendChild(label);
 
         }
-    }
-
-    ham.onmouseenter = function () {
-        img.src = 'imgs/iconShadow.png';
-    }
-    ham.onmouseleave = function () {
-        img.src = 'imgs/icon.png';
-    }
-    ham.onclick = function () {
-        list.style.display = "block";
     }
 </script>
 </body>

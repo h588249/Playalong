@@ -15,7 +15,7 @@
     <h1>Bye</h1>
     <h2>You are now logged out</h2>
     <div class="containerButton">
-        <a href="login.jsp"><button>Log in</button></a>
+        <a href="login"><button>Log in</button></a>
     </div>
 </body>
 </html>
