@@ -9,7 +9,8 @@
 <html>
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/css/style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
+    <link href="${pageContext.request.contextPath}/fontawesome/css/all.css" rel="stylesheet">
     <style>
         .modal-content {
             display: none;
@@ -21,32 +22,60 @@
     </style>
 </head>
 <body>
-<main>
-    <h1>Welcome</h1>
-    <label for="search">Search:</label>
-    <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
-    <form action="search" method="post">
-        <div id="listSongs">
-            <button type="submit">Press me</button>
-            <ul id="songList">
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <img src="${pageContext.request.contextPath}/resources/logo.png" width="32" height="32"/>
+                    <%--                    <i class="fas fa-bars"></i>--%>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-play"></i>
+                    <span class="link-text">Music</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-file-audio"></i>
+                    <span class="link-text">Upload</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-sliders-h"></i>
+                    <span class="link-text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome</h1>
+        <label for="search">Search:</label>
+        <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
+        <form action="search" method="post">
+            <div id="listSongs">
+                <button type="submit">Press me</button>
+                <ul id="songList">
 
-            </ul>
-        </div>
-    </form>
-    <div>
-        <form action="upload" method="post" enctype="multipart/form-data">
-            <label>
-                Song name
-                <input type="text" name="song_name" required>
-            </label>
-            <input type="file" name="file" required>
-            <button type="submit">press me</button>
+                </ul>
+            </div>
         </form>
-    </div>
-    <div id="top10">
+        <div>
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <label>
+                    Song name
+                    <input type="text" name="song_name" required>
+                </label>
+                <input type="file" name="file" required>
+                <button type="submit">press me</button>
+            </form>
+        </div>
+        <div id="top10">
 
-    </div>
-</main>
+        </div>
+    </main>
 <script>
     let img = document.getElementById("img");
     let div = document.getElementById("top10");
