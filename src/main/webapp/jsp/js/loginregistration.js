@@ -35,11 +35,10 @@ function validateRegisterAll()
 
 function validateLoginAll()
 {
-    if (
-        !isEmailValid(document.register.email.value) ||
+    if (!isEmailValid(document.register.email.value) ||
         !isPasswordValid(document.register.password.value))
     {
-        alert("Login ");
+        alert("Login using correct credidentials");
         return false;
     }
 }
