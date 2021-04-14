@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static utility.MappingUtility.CREATE_SONG_URL;
-import static utility.MappingUtility.INDEX_URL;
+import static utility.MappingUtility.*;
 import static utility.ServletUtility.initialize;
 import static utility.ServletUtility.libraryValidate;
 
@@ -32,7 +31,7 @@ public class CreateSongServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (!libraryValidate(req, resp, CREATE_SONG_URL)) {
-            resp.sendRedirect(INDEX_URL);
+            resp.sendRedirect(REGISTER_USER_URL);
             return;
         }
 
@@ -42,13 +41,15 @@ public class CreateSongServlet extends HttpServlet {
 
         songDAO = (SongDAO) initialize(songDAO, new SongDAO(repository));
 
-        if(songDAO.findSongWithName(songName) != null){
-            resp.sendRedirect(INDEX_URL);
-            return;
+        try {
+            if (songDAO.findSongWithName(songName) != null) {
+                resp.sendRedirect(INDEX_URL);
+                return;
+            }
+        } catch (RuntimeException ignored) {
         }
 
         songDAO.insert(new Song(songName, artistName, instrument));
-
         resp.sendRedirect(INDEX_URL);
     }
 }
