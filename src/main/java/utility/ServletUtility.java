@@ -60,4 +60,12 @@ public class ServletUtility {
                         || role.equals(Role.MODERATOR)
                         || role.equals(Role.ARTIST));
     }
+
+    public static void addStatusMessageToSession(HttpServletRequest request, String message) {
+        HttpSession session;
+
+        if ((session = request.getSession(false)) == null) return;
+
+        session.setAttribute("message", message);
+    }
 }
