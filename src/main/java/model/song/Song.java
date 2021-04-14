@@ -17,16 +17,14 @@ public class Song {
     @Column(name = "instrument") // is "main" necessary?
     private String mainInstrument;
 
-    private int duration;
-
     @Column(name = "song_directory")
     private String songDirectory;
 
-    public Song(String name, String artist, String mainInstrument, int duration) {
+    public Song(String name, String artist, String mainInstrument) {
         this.name = name;
         this.artist = artist;
         this.mainInstrument = mainInstrument;
-        this.duration = duration;
+        songDirectory = name.replaceAll(" ", "_");
     }
 
     protected Song() {
@@ -54,14 +52,6 @@ public class Song {
 
     public void setMainInstrument(String mainInstrument) {
         this.mainInstrument = mainInstrument;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 
     public String getSongDirectory() {
