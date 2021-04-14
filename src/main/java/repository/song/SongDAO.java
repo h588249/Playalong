@@ -33,10 +33,8 @@ public class SongDAO extends AbstractDAO<Song> {
      * @return A song which has "songName" as name or null if no song was found
      */
     public Song findSongWithName(String songName) {
-        return repository.get(
-                "select s from Song s where s.name = :song_name",
-                new Pair<>("song_name", songName)
-        );
+        return repository.getById(songName);
+
     }
 
     /**
