@@ -23,5 +23,7 @@ public class MappingUtility
 
     public static final String DISPLAY_URL = "display";
 
+    public static final String CREATE_SONG_URL = "createSong";
+
     public static final String FILE_UPLOAD_URL = "upload";
 }

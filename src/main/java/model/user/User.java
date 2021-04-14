@@ -29,6 +29,7 @@ public class User
         this.email = email;
         this.displayName = displayName;
         this.password = password;
+        role = Role.REGULAR;
     }
 
     public User(String username)
@@ -45,7 +46,7 @@ public class User
     {
         session.setAttribute("user_username", username);
         session.setAttribute("user_email", email);
-        session.setAttribute("user_role", role == null ? "" : role.getRole()); // PLACEHOLDER FOR NOW
+        session.setAttribute("user_role", role == null ? role = Role.REGULAR : role);
     }
 
     public String getUsername()

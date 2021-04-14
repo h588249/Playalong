@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
     private LoginDAO loginDAO = null;
     private SongDAO songDAO = null;
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("UTF-8");
 

@@ -19,6 +19,10 @@
         #list {
             display: none;
         }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +73,22 @@
                     <input type="text" name="song_name" required>
                 </label>
                 <input type="file" name="file" required>
-                <button type="submit">press me</button>
+                <button type="submit" style="width: 100px;">press me</button>
+            </form>
+            <form action="createSong" method="post">
+                <label>
+                    Song name
+                    <input type="text" name="song_name" required>
+                </label>
+                <label>
+                    Artist name
+                    <input type="text" name="artist_name" required>
+                </label>
+                <label>
+                    Instrument
+                    <input type="text" name="instrument" required>
+                </label>
+                <button type="submit" style="width: 100px;">press me</button>
             </form>
         </div>
         <div id="top10">
