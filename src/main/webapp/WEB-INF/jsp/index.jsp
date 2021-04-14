@@ -94,7 +94,7 @@
     let search = document.getElementById("search");
 
     search.onclick = function(){
-        console.log("page loaded.")
+        search.innerHTML = "";
         let songList = document.getElementById("songList");
         for (let song of songs){
             if(song !== ""){
