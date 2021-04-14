@@ -60,4 +60,13 @@ public class SongDAO extends AbstractDAO<Song> {
     public List<Song> getAllSongs() {
         return repository.getList("select s from Song s");
     }
+
+    /**
+     * Removes the song from the database if it exists
+     *
+     * @param song Song to be removed
+     */
+    public void removeSong(Song song) {
+        repository.delete(song);
+    }
 }
