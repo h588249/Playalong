@@ -43,7 +43,6 @@ CREATE TABLE song
     song_name  VARCHAR(32),
     artist     VARCHAR(32) NOT NULL,
     instrument VARCHAR(32) NOT NULL,
-    duration   INTEGER     NOT NULL,
     song_directory VARCHAR(32) NOT NULL,
     PRIMARY KEY (song_name)
 );

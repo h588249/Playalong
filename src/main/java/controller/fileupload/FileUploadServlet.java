@@ -1,7 +1,12 @@
 package controller.fileupload;
 
+import model.song.Song;
+import model.user.Role;
+import repository.Repository;
+import repository.song.SongDAO;
 import utility.PDFToPng;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +19,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static utility.MappingUtility.*;
+import static utility.ServletUtility.libraryValidate;
+import static utility.ServletUtility.validate;
 
 @WebServlet(name = "FileUploadServlet", value = "/" + FILE_UPLOAD_URL)
 @MultipartConfig(fileSizeThreshold = 1024 * 1024,
@@ -22,7 +29,12 @@ import static utility.MappingUtility.*;
 public class FileUploadServlet extends HttpServlet {
     private final String UPLOAD_DIRECTORY = "WEB-INF" + File.separator + "upload";
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -242147305764279714L;
+
+    @EJB
+    private Repository<Song> repository;
+
+    private SongDAO songDAO = null;
 
     private String getFileName(Part part) {
         for (String content : part.getHeader("content-disposition").split(";")) {
@@ -34,6 +46,12 @@ public class FileUploadServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        if (!libraryValidate(request, response, FILE_UPLOAD_URL)) {
+            response.sendRedirect(REGISTER_USER_URL);
+            return;
+        }
+
         String songName = request.getParameter("song_name");
 
         if (songName == null) {
@@ -41,11 +59,19 @@ public class FileUploadServlet extends HttpServlet {
             return;
         }
 
-        // TODO - Create song object(parameters from jsp) and save to db after everything has been executed successfully
+        songDAO = (SongDAO) utility.ServletUtility.initialize(songDAO, new SongDAO(repository));
+
+        Song song;
+
+        if ((song = songDAO.findSongWithName(songName)) == null) {
+            //Send error message
+            response.sendRedirect(INDEX_URL);
+            return;
+        }
 
         String uploadPath = getServletContext().getRealPath("")
                 + File.separator + UPLOAD_DIRECTORY
-                + File.separator + songName.replaceAll(" ", "_");
+                + File.separator + song.getSongDirectory();
 
         String soundUpload = uploadPath + File.separator + "sound";
 
@@ -75,10 +101,14 @@ public class FileUploadServlet extends HttpServlet {
             }
             request.setAttribute("message", "File " + fileName + " has uploaded successfully!");
 
-
         } catch (FileNotFoundException fne) {
             request.setAttribute("message", "There was an error: " + fne.getMessage());
         }
-        getServletContext().getRequestDispatcher("/" + INDEX_PATH).forward(request, response);
+        response.sendRedirect(INDEX_URL);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect(INDEX_URL);
     }
 }
