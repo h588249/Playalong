@@ -41,12 +41,9 @@ public class CreateSongServlet extends HttpServlet {
 
         songDAO = (SongDAO) initialize(songDAO, new SongDAO(repository));
 
-        try {
-            if (songDAO.findSongWithName(songName) != null) {
-                resp.sendRedirect(INDEX_URL);
-                return;
-            }
-        } catch (RuntimeException ignored) {
+        if (songDAO.findSongWithName(songName) != null) {
+            resp.sendRedirect(INDEX_URL);
+            return;
         }
 
         songDAO.insert(new Song(songName, artistName, instrument));
