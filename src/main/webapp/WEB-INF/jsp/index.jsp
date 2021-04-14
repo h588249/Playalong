@@ -9,7 +9,8 @@
 <html>
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
+    <link href="${pageContext.request.contextPath}/fontawesome/css/all.css" rel="stylesheet">
     <style>
         .modal-content {
             display: none;
@@ -21,11 +22,35 @@
     </style>
 </head>
 <body>
-<main>
-    <div class="main">
-        <div id="ham">
-            <img src="C:\Users\mathi\Pictures\Dat109Project\icon.png" id="img" alt="HamburgerList">
-        </div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <img src="${pageContext.request.contextPath}/resources/logo.png" width="32" height="32"/>
+                    <%--                    <i class="fas fa-bars"></i>--%>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-play"></i>
+                    <span class="link-text">Music</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-file-audio"></i>
+                    <span class="link-text">Upload</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-sliders-h"></i>
+                    <span class="link-text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
         <h1>Welcome</h1>
         <label for="search">Search:</label>
         <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
@@ -50,15 +75,8 @@
         <div id="top10">
 
         </div>
-    </div>
-</main>
-<aside>
-    <div id="list">
-        <p>Hei</p>
-    </div>
-</aside>
+    </main>
 <script>
-    let ham = document.getElementById("ham");
     let img = document.getElementById("img");
     let div = document.getElementById("top10");
     let list = document.getElementById("list");
@@ -107,16 +125,6 @@
                 li[i].style.display = "none";
             }
         }
-    }
-
-    ham.onmouseenter = function () {
-        img.src = 'imgs/iconShadow.png';
-    }
-    ham.onmouseleave = function () {
-        img.src = 'imgs/icon.png';
-    }
-    ham.onclick = function () {
-        list.style.display = "block";
     }
 </script>
 </body>
