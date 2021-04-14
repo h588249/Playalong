@@ -62,7 +62,9 @@ public class FileUploadServlet extends HttpServlet {
 
         songDAO = (SongDAO) utility.ServletUtility.initialize(songDAO, new SongDAO(repository));
 
-        if (songDAO.findSongWithName(songName) == null) {
+        Song song;
+
+        if ((song = songDAO.findSongWithName(songName)) == null) {
             //Send error message
             response.sendRedirect(INDEX_URL);
             return;
@@ -70,7 +72,7 @@ public class FileUploadServlet extends HttpServlet {
 
         String uploadPath = getServletContext().getRealPath("")
                 + File.separator + UPLOAD_DIRECTORY
-                + File.separator + songName.replaceAll(" ", "_");
+                + File.separator + song.getSongDirectory();
 
         String soundUpload = uploadPath + File.separator + "sound";
 
