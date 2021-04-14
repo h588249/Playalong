@@ -3,7 +3,7 @@ package login;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static controller.validation.LoginValidator.*;
+import static utility.LoginValidator.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 

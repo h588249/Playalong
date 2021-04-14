@@ -26,9 +26,9 @@ CREATE TABLE usertable
 );
 
 INSERT INTO usertable (username, role, email, display_name, password)
-VALUES ('admin', 'ADMIN', 'sysadmin@playalong.com', 'systemadmin',
-        'AkFsNSw0pMXGeuuAjIM6fsm0pwJUtvnhycfF7uhB+Iu6x6G47uZ1Mxn+zG29Qnn2ih7RYZLqYSM=');
--- password: sysadm
+VALUES ('ADMIN', 'ADMIN', 'sysadmin@playalong.com', 'ADMIN',
+        '/12ytEn3JAqxOjp8o0I3+n/qX9gCc8IUcNNYH9Yzw8HqgdJGXIE45Y7Hw18JtxC9pZX58xOTteQ=');
+-- password: Sysadm0-
 CREATE TABLE log
 (
     id          SERIAL NOT NULL,
