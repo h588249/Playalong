@@ -1,8 +1,8 @@
-package controller.validation;
+package utility;
 
 import java.util.regex.Pattern;
 
-public class Validator {
+public class LoginValidator {
 
     public static boolean isFirstnameValid(String firstname){
         boolean isValid = false;

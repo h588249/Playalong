@@ -1,7 +1,5 @@
 package utility;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import java.security.NoSuchAlgorithmException;
@@ -9,6 +7,7 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Arrays;
 import java.util.Base64;
+import static utility.LoginValidator.*;
 
 public class PasswordUtility
 {
@@ -17,11 +16,10 @@ public class PasswordUtility
 
     private static final int KEY_LENGTH = 256; // For PBEKeySpec
     private static final String KEY_FACTORY_ALGORITHM = "PBKDF2WithHmacSHA256";
-    private static final String VALID_PASSWORD_PATTERN = "^.{5,}$";
 
     public static boolean checkPassword(String password, String encryptedPassword)
     {
-        if (password == null || !password.matches(VALID_PASSWORD_PATTERN))
+        if (password == null || !isPasswordValid(password))
         {
             return false;
         }
@@ -32,7 +30,7 @@ public class PasswordUtility
 
     public static String encryptPassword(String password) throws IllegalArgumentException
     {
-        if (password == null || !password.matches(VALID_PASSWORD_PATTERN))
+        if (password == null || !isPasswordValid(password))
         {
             throw new IllegalArgumentException("Password does not match valid pattern");
         }
