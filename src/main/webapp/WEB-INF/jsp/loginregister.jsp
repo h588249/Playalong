@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/WEB-INF/jsp/css/style.scss" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.scss" />
     <title></title>
 </head>
 <body>
@@ -50,6 +50,6 @@
         </div>
     </div>
 </body>
-<script src="${pageContext.request.contextPath}/WEB-INF/jsp/js/loginregistration.js"></script>
-<script src="${pageContext.request.contextPath}/WEB-INF/jsp/js/validator.js"></script>
+<script src="${pageContext.request.contextPath}/js/loginregistration.js"></script>
+<script src="${pageContext.request.contextPath}/js/validator.js"></script>
 </html>

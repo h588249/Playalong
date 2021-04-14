@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Logged out</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/WEB-INF/jsp/css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
 </head>
 <body>
     <h1>Bye</h1>
