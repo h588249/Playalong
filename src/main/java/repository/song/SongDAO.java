@@ -33,10 +33,8 @@ public class SongDAO extends AbstractDAO<Song> {
      * @return A song which has "songName" as name or null if no song was found
      */
     public Song findSongWithName(String songName) {
-        return repository.get(
-                "select s from Song s where s.name = :song_name",
-                new Pair<>("song_name", songName)
-        );
+        return repository.getById(songName);
+
     }
 
     /**
@@ -61,5 +59,14 @@ public class SongDAO extends AbstractDAO<Song> {
      */
     public List<Song> getAllSongs() {
         return repository.getList("select s from Song s");
+    }
+
+    /**
+     * Removes the song from the database if it exists
+     *
+     * @param song Song to be removed
+     */
+    public void removeSong(Song song) {
+        repository.delete(song);
     }
 }

@@ -13,7 +13,9 @@ List of song names:
 Name of chosen song:  
 ``song_name``  
 Chosen song object:  
-``song``
+``song``  
+Status message:  
+``message``
 
 ##### Routing variables:
 
