@@ -19,7 +19,13 @@
         #list {
             display: none;
         }
-        form{
+		
+        form > div{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow-y: scroll;
+        form {
             display: flex;
             flex-direction: column;
         }
@@ -60,11 +66,12 @@
         <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
         <form action="search" method="post">
             <div id="listSongs">
-                <button type="submit">Press me</button>
                 <ul id="songList">
 
                 </ul>
+
             </div>
+                <button type="submit">Search</button>
         </form>
         <div>
             <form action="upload" method="post" enctype="multipart/form-data">
@@ -101,18 +108,19 @@
     let list = document.getElementById("list");
 
     let listSongs = document.getElementById("listSongs");
-    let songs = '${songs}'.replaceAll(/[\[\]]/g,"").split(", "); //change to a better solution when completed
+    let songs = '${requestScope["song"]}'.replaceAll(/[\[\]]/g,"").split(", "); //change to a better solution when completed
     let search = document.getElementById("search");
 
     search.onclick = function(){
-        console.log("page loaded.")
-        songList = document.getElementById("songList");
+        search.innerHTML = "";
+        let songList = document.getElementById("songList");
         for (let song of songs){
-            let child = document.createElement("li");
-            child.innerHTML = song;
-            songList.appendChild(child);
+            if(song !== ""){
+                let child = document.createElement("li");
+                child.innerHTML = song;
+                songList.appendChild(child);
+            }
 
-            
             /*
             let temp = document.createElement("input");
             temp.name = "select_song";
@@ -129,7 +137,7 @@
     }
 
     function searchFunction(){
-        var input, filter, ul, li, a, i, txtValue;
+        let input, filter, ul, li, a, i, txtValue;
         input = document.getElementById('search');
         filter = input.value.toUpperCase();
         ul = document.getElementById("songList");
