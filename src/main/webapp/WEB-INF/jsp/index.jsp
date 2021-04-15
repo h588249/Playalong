@@ -63,13 +63,14 @@
     <main>
         <h1>Welcome</h1>
         <label for="search">Search:</label>
-        <input type="text" id="search" class="input" onkeyup="searchFunction()" name="search" placeholder="Search for songs"/>
-        <form action="search" method="post">
+        <form id="search" name="search" action="search" method="post">
+            <input type="text" name="searchText" id="searchText" class="input" placeholder="Search for songs"/>
             <div id="listSongs">
-                <ul id="songList">
-
+                <ul id="songList" class="hide">
+                    <li>fake</li>
                 </ul>
-
+                <ul id="top10List" class="hide">
+                </ul>
             </div>
                 <button type="submit">Search</button>
         </form>
@@ -102,57 +103,6 @@
 
         </div>
     </main>
-<script>
-    let img = document.getElementById("img");
-    let div = document.getElementById("top10");
-    let list = document.getElementById("list");
-
-    let listSongs = document.getElementById("listSongs");
-    let songs = '${requestScope["song"]}'.replaceAll(/[\[\]]/g,"").split(", "); //change to a better solution when completed
-    let search = document.getElementById("search");
-
-    search.onclick = function(){
-        search.innerHTML = "";
-        let songList = document.getElementById("songList");
-        for (let song of songs){
-            if(song !== ""){
-                let child = document.createElement("li");
-                child.innerHTML = song;
-                songList.appendChild(child);
-            }
-
-            /*
-            let temp = document.createElement("input");
-            temp.name = "select_song";
-            temp.type = "radio";
-            temp.value = song;
-
-            let label = document.createElement("label");
-            label.innerHTML = song;
-
-            listSongs.appendChild(temp);
-            listSongs.appendChild(label);
-            */
-        }
-    }
-
-    function searchFunction(){
-        let input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById('search');
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("songList");
-        li = ul.getElementsByTagName('li');
-
-        for (i = 0; i < li.length; i++){
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if(txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
-            }
-        }
-    }
-</script>
 </body>
+<script src="${pageContext.request.contextPath}/js/search.js" defer></script>
 </html>
