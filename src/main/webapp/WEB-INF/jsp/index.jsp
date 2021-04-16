@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
     <link href="${pageContext.request.contextPath}/fontawesome/css/all.css" rel="stylesheet">
     <style>
         .modal-content {
@@ -19,12 +19,14 @@
         #list {
             display: none;
         }
-		
-        form > div{
+
+        form > div {
             width: 100%;
             height: 100%;
             text-align: center;
             overflow-y: scroll;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -104,5 +106,5 @@
         </div>
     </main>
 </body>
-<script src="${pageContext.request.contextPath}/js/search.js" defer></script>
+<jsp:include page="${pageContext.request.contextPath}/js/search_js.jsp" />
 </html>

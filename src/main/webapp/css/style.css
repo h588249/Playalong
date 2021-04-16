@@ -31,6 +31,20 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.songListLabel {
+    display: flex;
+    flex-direction: column;
+}
+
+.songListLabel > input {
+    width: 0;
+    height: 0;
+}
+
+.songListLabelChecked{
+    background-color: blue;
+}
+
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -129,7 +143,7 @@ main {
     }
 }
 
- /* Large screens */
+/* Large screens */
 @media only screen and (min-width: 600px) {
     .navbar {
         top: 0;
@@ -157,7 +171,6 @@ main {
         transition: opacity 0.6s ease-in-out;
     }
 }
-
 
 
 h1 {
@@ -236,8 +249,8 @@ form {
 .container {
     background-color: #f5f6f8;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-    0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -259,7 +272,7 @@ form {
 }
 
 .container.right-panel-active .login-container {
-    transform:  translateX(100%);
+    transform: translateX(100%);
 }
 
 .register-container {

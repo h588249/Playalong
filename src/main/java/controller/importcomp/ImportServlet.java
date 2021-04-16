@@ -14,8 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 import static utility.MappingUtility.*;
-import static utility.ServletUtility.initialize;
-import static utility.ServletUtility.validate;
+import static utility.ServletUtility.*;
 
 @WebServlet(name = "ImportServlet", value = "/" + IMPORT_URL)
 public class ImportServlet extends HttpServlet {
@@ -31,7 +30,7 @@ public class ImportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(!validate(req, resp, IMPORT_URL)){
+        if (!validate(req, resp, IMPORT_URL)) {
             resp.sendRedirect(LOGIN_URL);
             return;
         }
@@ -40,7 +39,8 @@ public class ImportServlet extends HttpServlet {
 
         Object o = session.getAttribute("song_name");
 
-        if(o == null || o.getClass() != String.class){
+        if (o == null || o.getClass() != String.class) {
+            addStatusMessageToSession(req, "song_name is either null or not a string");
             resp.sendRedirect(INDEX_URL);
             return;
         }
@@ -48,10 +48,13 @@ public class ImportServlet extends HttpServlet {
         dao = (SongDAO) initialize(dao, new SongDAO(repository));
         Song song = dao.findSongWithName((String) o);
 
-        if(song == null){
+        if (song == null) {
+            addStatusMessageToSession(req, "No song with the name " + o);
             resp.sendRedirect(INDEX_URL);
             return;
         }
+
+        dao.updateTimesPlayed(song.getName());
 
         session.setAttribute("song", song);
 

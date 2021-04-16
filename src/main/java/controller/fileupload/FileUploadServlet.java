@@ -1,7 +1,6 @@
 package controller.fileupload;
 
 import model.song.Song;
-import model.user.Role;
 import repository.Repository;
 import repository.song.SongDAO;
 import utility.PDFToPng;
@@ -19,8 +18,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static utility.MappingUtility.*;
+import static utility.ServletUtility.addStatusMessageToSession;
 import static utility.ServletUtility.libraryValidate;
-import static utility.ServletUtility.validate;
 
 @WebServlet(name = "FileUploadServlet", value = "/" + FILE_UPLOAD_URL)
 @MultipartConfig(fileSizeThreshold = 1024 * 1024,
@@ -55,6 +54,7 @@ public class FileUploadServlet extends HttpServlet {
         String songName = request.getParameter("song_name");
 
         if (songName == null) {
+            addStatusMessageToSession(request, "Error: Song name was null");
             response.sendRedirect(INDEX_URL);
             return;
         }
@@ -64,7 +64,7 @@ public class FileUploadServlet extends HttpServlet {
         Song song;
 
         if ((song = songDAO.findSongWithName(songName)) == null) {
-            //Send error message
+            addStatusMessageToSession(request, "Song with the name " + songName + " does not exist");
             response.sendRedirect(INDEX_URL);
             return;
         }
@@ -99,10 +99,10 @@ public class FileUploadServlet extends HttpServlet {
                         new File(uploadPath + File.separator + fileName));
 
             }
-            request.setAttribute("message", "File " + fileName + " has uploaded successfully!");
+            addStatusMessageToSession(request, "File " + fileName + " has uploaded successfully!");
 
         } catch (FileNotFoundException fne) {
-            request.setAttribute("message", "There was an error: " + fne.getMessage());
+            addStatusMessageToSession(request, "There was an error when uploading");
         }
         response.sendRedirect(INDEX_URL);
     }
