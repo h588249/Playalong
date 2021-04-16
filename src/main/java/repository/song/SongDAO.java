@@ -69,4 +69,8 @@ public class SongDAO extends AbstractDAO<Song> {
     public void removeSong(Song song) {
         repository.delete(song);
     }
+
+    public void updateSong(Song song){
+        repository.update(song);
+    }
 }
