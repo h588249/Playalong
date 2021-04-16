@@ -69,4 +69,9 @@ public class SongDAO extends AbstractDAO<Song> {
     public void removeSong(Song song) {
         repository.delete(song);
     }
+
+    public void updateTimesPlayed(String songName){
+        repository.executeUpdateQuery("UPDATE Song s SET s.timesPlayed = s.timesPlayed + 1 where s.name = :name",
+                new Pair<>("name", songName));
+    }
 }

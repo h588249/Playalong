@@ -1,7 +1,7 @@
 package repository.registeruser;
 
 import model.user.User;
-import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import repository.AbstractDAO;
 import repository.Repository;
 import utility.PasswordUtility;
