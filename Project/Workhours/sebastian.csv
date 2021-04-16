@@ -23,3 +23,5 @@ Date;Hours;Description
 21/4/14;5;File handling system updating
 21/4/15;1;Created file remove servlet
 21/4/16;6;Song related improvements, fixing search list, small fixes
+21/4/16;4;Implemented Display servlet and made song.jsp work
+
