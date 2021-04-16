@@ -66,7 +66,11 @@ public class Song {
         this.songDirectory = songDirectory;
     }
 
-    public void incTimesPlayed(){
-        timesPlayed++;
+    public int getTimesPlayed() {
+        return timesPlayed;
+    }
+
+    public void setTimesPlayed(int timesPlayed) {
+        this.timesPlayed = timesPlayed;
     }
 }
