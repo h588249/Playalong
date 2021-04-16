@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static utility.MappingUtility.*;
-import static utility.ServletUtility.initialize;
-import static utility.ServletUtility.libraryValidate;
+import static utility.ServletUtility.*;
 
 @WebServlet(name = "CreateSongServlet", value = "/" + CREATE_SONG_URL)
 public class CreateSongServlet extends HttpServlet {
@@ -42,6 +41,7 @@ public class CreateSongServlet extends HttpServlet {
         songDAO = (SongDAO) initialize(songDAO, new SongDAO(repository));
 
         if (songDAO.findSongWithName(songName) != null) {
+            addStatusMessageToSession(req, "Song with name " + songName + " already exists");
             resp.sendRedirect(INDEX_URL);
             return;
         }

@@ -20,7 +20,7 @@ public class SearchServlet extends HttpServlet {
             return;
         }
 
-        String select_song = req.getParameter("select_song");
+        String select_song = req.getParameter("song_name");
 
         if (select_song == null || (select_song = select_song.trim()).isEmpty()) {
             resp.sendRedirect(INDEX_URL);
