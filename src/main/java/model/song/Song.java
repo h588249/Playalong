@@ -20,10 +20,14 @@ public class Song {
     @Column(name = "song_directory")
     private String songDirectory;
 
+    @Column(name = "times_played")
+    private int timesPlayed;
+
     public Song(String name, String artist, String mainInstrument) {
         this.name = name;
         this.artist = artist;
         this.mainInstrument = mainInstrument;
+        timesPlayed = 0;
         songDirectory = name.replaceAll(" ", "_");
     }
 
@@ -60,5 +64,9 @@ public class Song {
 
     public void setSongDirectory(String songDirectory) {
         this.songDirectory = songDirectory;
+    }
+
+    public void incTimesPlayed(){
+        timesPlayed++;
     }
 }
