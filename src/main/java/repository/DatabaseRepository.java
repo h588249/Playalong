@@ -189,6 +189,11 @@ public class DatabaseRepository<T> implements Repository<T> {
         return newEntities;
     }
 
+    @Override
+    public void executeUpdateQuery(String updateQuery, Pair<String, String> pair){
+        manager.createQuery(updateQuery).setParameter(pair.getFirst(), pair.getSecond()).executeUpdate();
+    }
+
     /**
      * Defines the entity type for searches
      *

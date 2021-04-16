@@ -30,5 +30,7 @@ public interface Repository<T> {
 
     List<T> update(List<T> entities);
 
+    void executeUpdateQuery(String updateQuery, Pair<String, String> pair);
+
     void setType(Class<T> type);
 }
