@@ -104,5 +104,5 @@
         </div>
     </main>
 </body>
-<script src="${pageContext.request.contextPath}/js/search.js" defer></script>
+<jsp:include page="${pageContext.request.contextPath}/js/search_js.jsp" />
 </html>
