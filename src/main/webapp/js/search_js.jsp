@@ -37,6 +37,9 @@
             top10List.classList.remove("show");
         }
 
+        while (songList.hasChildNodes()) {
+            songList.removeChild(songList.firstChild);
+        }
 
         if (search.value === "") {
             return;
@@ -48,6 +51,17 @@
                 }
                 let child = document.createElement("li");
 
+                let input = document.createElement("input");
+                input.type = "radio";
+                input.value = song;
+                input.name = "song_name";
+
+                let label = document.createElement("label")
+                label.classList.add("songListLabel")
+                label.innerHTML = song
+                label.appendChild(input)
+
+                child.appendChild(label)
 
                 songList.appendChild(child);
             } else {
@@ -58,6 +72,20 @@
     }
 
 
+    songList.onclick = function () {
+        let songListLabel = document.getElementsByClassName("songListLabel");
+        for (const n of songListLabel) {
+            if (n.classList.contains("songListLabelChecked")) {
+                n.classList.remove("songListLabelChecked")
+            }
+            n.childNodes.forEach(node => {
+                    if (node.checked === true) {
+                        n.classList.add("songListLabelChecked")
+                    }
+                }
+            )
+        }
+    }
 
     /*
     function searchFunction(){
