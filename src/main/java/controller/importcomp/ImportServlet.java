@@ -53,6 +53,8 @@ public class ImportServlet extends HttpServlet {
             return;
         }
 
+        dao.updateTimesPlayed(song.getName());
+
         session.setAttribute("song", song);
 
         resp.sendRedirect(DISPLAY_URL);
