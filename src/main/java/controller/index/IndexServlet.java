@@ -33,7 +33,7 @@ public class IndexServlet extends HttpServlet {
                 .map(Song::getName)
                 .map(StringEscapeUtils::escapeHtml4)
                 .reduce("", (a, b) -> a + "#$" + b);
-        request.setAttribute("songs", songList.substring(2));
+        request.setAttribute("songs", songList.length() > 1 ? songList.substring(2) : songList);
 
         request.getRequestDispatcher(INDEX_PATH).forward(request, response);
     }
